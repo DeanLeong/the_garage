@@ -43,6 +43,8 @@ The Garage is an app that is focused on helping users manage their motorcycle's 
 
 4 - Built in React, styled with CSS.
 
+5 - Rails backend.
+
 **The Garage MVP** 
 
 The MVP goals are to have a user concept, one motorcycle per user and one motorcycle has many maintenance notes. This will require a minimum of 4 pages built initally: a login page, registration page, homepage that includes the user and their motorcycle, and a page for the motorcycle's maintenence notes. This will meet the requirement of a rails backend with three tables as well as a React front end.
