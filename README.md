@@ -26,6 +26,7 @@
 ## Overview
 
 **The Garage** 
+
 The Garage is an app that is focused on helping users manage their motorcycle's maintenance. Users will be able to add a motorcycle to their "garage" and add their motorcycle's maintenence schedule to the motorcycle. For example, "At 10k miles an oil chance is needed." These maintenance notes will feature full CRUD.  The motorcycle will also have general notes such as "takes 10w-30 oil" so that the app is capable of being a one-stop app for most things motorcycle maintenence related. Other features will include uploading a picture of the motorcycle.
 
 
