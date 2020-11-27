@@ -25,7 +25,8 @@
 
 ## Overview
 
-_**The Garage** The Garage is an app that is focused on helping users manage their motorcycle's maintenance. Users will be able to add a motorcycle to their "garage" and add their motorcycle's maintenence schedule to the motorcycle. For example, "At 10k miles an oil chance is needed." These maintenance notes will feature full CRUD.  The motorcycle will also have general notes such as "takes 10w-30 oil" so that the app is capable of being a one-stop app for most things motorcycle maintenence related. Other features will include uploading a picture of the motorcycle.
+**The Garage** 
+The Garage is an app that is focused on helping users manage their motorcycle's maintenance. Users will be able to add a motorcycle to their "garage" and add their motorcycle's maintenence schedule to the motorcycle. For example, "At 10k miles an oil chance is needed." These maintenance notes will feature full CRUD.  The motorcycle will also have general notes such as "takes 10w-30 oil" so that the app is capable of being a one-stop app for most things motorcycle maintenence related. Other features will include uploading a picture of the motorcycle.
 
 
 <br>
@@ -37,7 +38,8 @@ _**The Garage** The Garage is an app that is focused on helping users manage the
 3 - One motorcycle has maintenance notes. (Table 3)
 4 - Built in React, styled with CSS.
 
-_The **Project Title** MVP 
+**The Garage MVP** 
+The MVP goals are to have a user concept, one motorcycle per user and one motorcycle has many maintenance notes. This will require a minimum of 4 pages built initally: a login page, registration page, homepage that includes the user and their motorcycle, and a page for the motorcycle's maintenence notes. This will meet the requirement of a rails backend with three tables as well as a React front end.
 
 <br>
 
@@ -57,11 +59,10 @@ _The **Project Title** MVP
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Use the React framework to design the front end of the app. |
+|   React Router   | Use React router to make links and Routes throughout the app. |
+|     Ruby      | Use the Ruby language to build the backend via Rails |
+|  Ruby on Rails  | Use the Rails framework to create the back end and the three tables. |
 
 <br>
 
@@ -70,6 +71,8 @@ _The **Project Title** MVP
 #### Wireframes
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+
+https://www.figma.com/file/iHCOw9l8Z2Po8goXsGKw2P/Untitled?node-id=0%3A1
 
 ![Dummy Link](url)
 
@@ -99,6 +102,8 @@ _The **Project Title** MVP
 
 > Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
 
+https://whimsical.com/p4-XENZGCryWN8Z14XcTNLfvY
+
 #### Component Hierarchy
 
 > Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
@@ -112,16 +117,16 @@ src
       |__ images
       |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ Shared/
+        |__ Header.jsx
+        |__ Footer.jsx
 |__ services/
 
 ```
 
 #### Component Tree
 
-> Use this section to include a link to your component tree.
-
-[Component tree](url)
+https://whimsical.com/p4-XENZGCryWN8Z14XcTNLfvY
 
 #### Time Estimates
 
@@ -129,8 +134,15 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Rails Boilerplate   |    H     |     3 hrs      |     0 hrs     |   TBD    |
+| Rails Tables 1-3 |    H     |     6 hrs      |     0 hrs     |     TBD     |
+| Users Concept|    H     |     6 hrs      |     0 hrs     |   TBD   |
+| React Boilerplate |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| Register Page   |    H     |     3 hrs      |     0 hrs     |    TBD   |
+| Login Page |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| Homepage   |    H     |     5 hrs      |     0 hrs     |   TBD    |
+| Motorcycle Page |    H     |     5 hrs      |     0 hrs     |     TBD     |
+| General CSS |    H     |     10 hrs      |     0 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
 > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
@@ -142,6 +154,7 @@ src
 #### ERD Model
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+https://app.diagrams.net/?libs=general;uml#G1srwXfq0TkSBgOqrirRop1_9kiKZA5Zm9
 
 <br>
 
@@ -149,7 +162,8 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+1 - Users can have multiple motorcycles.
+2 - Add "Motorcycle Parts" to the motorcycle's page. Can add images of desired parts etc.
 
 ***
 
