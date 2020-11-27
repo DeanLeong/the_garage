@@ -25,16 +25,19 @@
 
 ## Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_**The Garage** The Garage is an app that is focused on helping users manage their motorcycle's maintenance. Users will be able to add a motorcycle to their "garage" and add their motorcycle's maintenence schedule to the motorcycle. For example, "At 10k miles an oil chance is needed." These maintenance notes will feature full CRUD.  The motorcycle will also have general notes such as "takes 10w-30 oil" so that the app is capable of being a one-stop app for most things motorcycle maintenence related. Other features will include uploading a picture of the motorcycle.
 
 
 <br>
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
+1 - A users concept. (Table 1)
+2 - One motorcycle per user. (Table 2)
+3 - One motorcycle has maintenance notes. (Table 3)
+4 - Built in React, styled with CSS.
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_The **Project Title** MVP 
 
 <br>
 
