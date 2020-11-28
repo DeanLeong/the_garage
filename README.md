@@ -82,9 +82,9 @@ The MVP goals are to have a user concept, one motorcycle per user and one motorc
 
 https://www.figma.com/file/iHCOw9l8Z2Po8goXsGKw2P/Untitled?node-id=0%3A1
 
-![Dummy Link](url)
+![https://imgur.com/7R9NVF0
 
-- Desktop Landing
+- Desktop Homepage
 
 ![Dummy Link](url)
 
