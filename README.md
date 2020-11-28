@@ -37,7 +37,7 @@ The Garage is an app that is focused on helping users manage their motorcycle's 
 
 1 - A users concept. (Table 1)
 
-2 - One motorcycle per user. (Table 2)
+2 - One+ motorcycle per user. (Table 2)
 
 3 - One motorcycle has maintenance notes. (Table 3)
 
@@ -53,11 +53,11 @@ The MVP goals are to have a user concept, one motorcycle per user and one motorc
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Create a user concept with auth.
+- Each user can have one or more motorcycles.
+- The motorcycles each have a page that displays notes taken for that motorcycle.
+- 
+- 
 
 <br>
 
