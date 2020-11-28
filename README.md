@@ -191,6 +191,8 @@ https://whimsical.com/p4-XENZGCryWN8Z14XcTNLfvY
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 https://app.diagrams.net/?libs=general;uml#G1srwXfq0TkSBgOqrirRop1_9kiKZA5Zm9
 
+![Image of Register Page](https://github.com/DeanLeong/the_garage/blob/main/p4register.png)
+
 <br>
 
 ***
