@@ -118,17 +118,47 @@ https://whimsical.com/p4-XENZGCryWN8Z14XcTNLfvY
 
 ``` structure
 
-src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Shared/
-        |__ Header.jsx
-        |__ Footer.jsx
-|__ services/
+client
+|__ src/
+  |__ assets/
+        |__ fonts
+        |__ images
+  |__ components/
+        |__ Shared/
+           |__ Header/
+             |__ Header.jsx
+             |__ Header.css
+           |__ Footer/  
+             |__ Footer.jsx
+             |__ Footer.css
+           |__ Layout
+             |__ Layout.jsx
+             |__ Footer.css
+           |__ Buttons/
+             |__ Buttons.jsx
+             |__ Buttons.css
+           |__ McImageContainer/
+             |__ McImageContainer.jsx
+             |__ McImageContainer.css
+      |__ Screens       
+        |__ HomePage/
+          |__ HomePage.jsx
+          |__ HomePage.css
+        |__ McPage/
+          |__ McPage.jsx
+          |__ McPage.css
+        |__ AddMcPage/
+          |__ AddMcPage.jsx
+          |__ AddMcPage.css
+      |__ services/
+          |__ apiConfig.js
+          |__ auth.js
+          |__ motorcycles.js
+          |__ maintenanceNotes.js
+     |__App.js
+     |__App.css
+     |__Index.js
+     |__Index.css
 
 ```
 
