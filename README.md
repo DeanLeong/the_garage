@@ -174,7 +174,7 @@ https://whimsical.com/p4-XENZGCryWN8Z14XcTNLfvY
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Rails Boilerplate   |    H     |     3 hrs      |     0 hrs     |   TBD    |
 | Rails Tables 1-3 |    H     |     6 hrs      |     0 hrs     |     TBD     |
-| Users Concept|    H     |     6 hrs      |     0 hrs     |   TBD   |
+| Users Concept|    H     |     10 hrs      |     0 hrs     |   TBD   |
 | React Boilerplate |    H     |     3 hrs      |     0 hrs     |     TBD     |
 | Register Page   |    H     |     3 hrs      |     0 hrs     |    TBD   |
 | Login Page |    H     |     3 hrs      |     0 hrs     |     TBD     |
