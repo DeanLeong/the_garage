@@ -94,7 +94,7 @@ https://www.figma.com/file/iHCOw9l8Z2Po8goXsGKw2P/Untitled?node-id=0%3A1
 
 - Add MC Page
 
-![Image of Login Page](https://github.com/DeanLeong/the_garage/blob/main/p4login.png)
+![Image of Login Page](https://github.com/DeanLeong/the_garage/blob/main/updatedlogin.png)
 
 - Login Page
 
