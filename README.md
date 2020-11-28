@@ -86,25 +86,21 @@ https://www.figma.com/file/iHCOw9l8Z2Po8goXsGKw2P/Untitled?node-id=0%3A1
 
 - Desktop Homepage
 
-![Dummy Link](url)
+![Image of MC Page](https://github.com/DeanLeong/the_garage/blob/main/p4mcpage.png)
 
-- Desktop Hero
+- Desktop MC Page
 
-![Dummy Link](url)
+![Image of add MC Page](https://github.com/DeanLeong/the_garage/blob/main/p4addmcpage.png)
 
-- Resource Index
+- Add MC Page
 
-![Dummy Link](url)
+![Image of Login Page](https://github.com/DeanLeong/the_garage/blob/main/p4login.png)
 
-- Resource Show
+- Login Page
 
-![Dummy Link](url)
+![Image of Register Page](https://github.com/DeanLeong/the_garage/blob/main/p4register.png)
 
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+- Register Page
 
 #### Component Tree
 
