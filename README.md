@@ -56,14 +56,10 @@ The MVP goals are to have a user concept, one motorcycle per user and one motorc
 - Create a user concept with auth.
 - Each user can have one or more motorcycles.
 - The motorcycles each have a page that displays notes taken for that motorcycle.
-- 
-- 
 
 <br>
 
 ### Libraries and Dependencies
-
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
@@ -77,8 +73,6 @@ The MVP goals are to have a user concept, one motorcycle per user and one motorc
 ### Client (Front End)
 
 #### Wireframes
-
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
 https://www.figma.com/file/iHCOw9l8Z2Po8goXsGKw2P/Untitled?node-id=0%3A1
 
@@ -110,7 +104,6 @@ https://whimsical.com/p4-XENZGCryWN8Z14XcTNLfvY
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
@@ -178,11 +171,11 @@ client
 | Login Page |    H     |     3 hrs      |     0 hrs     |     TBD     |
 | Homepage   |    H     |     5 hrs      |     0 hrs     |   TBD    |
 | Motorcycle Page |    H     |     5 hrs      |     0 hrs     |     TBD     |
+| Add Motorcycle Page |    H     |     5 hrs      |     0 hrs     |     TBD     |
 | General CSS |    H     |     10 hrs      |     0 hrs     |     TBD     |
 | Quality Testing and Bug Fixing |    H     |     10 hrs      |     0 hrs     |     TBD     |
 | TOTAL               |          |     0 hrs      |     0 hrs     |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
@@ -193,7 +186,7 @@ client
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 https://app.diagrams.net/?libs=general;uml#G1srwXfq0TkSBgOqrirRop1_9kiKZA5Zm9
 
-![Image of ERD](https://github.com/DeanLeong/the_garage/blob/main/Screen%20Shot%202020-11-28%20at%201.16.31%20PM.png)
+![Image of ERD](https://github.com/DeanLeong/the_garage/blob/main/wireframes/Screen%20Shot%202020-11-28%20at%201.16.31%20PM.png)
 
 <br>
 
