@@ -155,8 +155,6 @@ client
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Rails Boilerplate   |    H     |     3 hrs      |     0 hrs     |   TBD    |
@@ -179,7 +177,6 @@ client
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 https://app.diagrams.net/?libs=general;uml#G1srwXfq0TkSBgOqrirRop1_9kiKZA5Zm9
 
 ![Image of ERD](https://github.com/DeanLeong/the_garage/blob/main/wireframes/Screen%20Shot%202020-11-28%20at%201.16.31%20PM.png)
