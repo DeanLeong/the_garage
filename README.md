@@ -86,19 +86,19 @@ https://www.figma.com/file/iHCOw9l8Z2Po8goXsGKw2P/Untitled?node-id=0%3A1
 
 - Desktop Homepage
 
-![Image of MC Page](https://github.com/DeanLeong/the_garage/blob/main/p4mcpage.png)
+![Image of MC Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/p4mcpage.png)
 
 - Desktop MC Page
 
-![Image of add MC Page](https://github.com/DeanLeong/the_garage/blob/main/p4addmcpage.png)
+![Image of add MC Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/p4addmcpage.png)
 
 - Add MC Page
 
-![Image of Login Page](https://github.com/DeanLeong/the_garage/blob/main/updatedlogin.png)
+![Image of Login Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/updatedlogin.png)
 
 - Login Page
 
-![Image of Register Page](https://github.com/DeanLeong/the_garage/blob/main/p4register.png)
+![Image of Register Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/p4register.png)
 
 - Register Page
 
