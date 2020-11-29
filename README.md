@@ -104,8 +104,6 @@ https://www.figma.com/file/iHCOw9l8Z2Po8goXsGKw2P/Untitled?node-id=0%3A1
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
-
 https://whimsical.com/p4-XENZGCryWN8Z14XcTNLfvY
 
 #### Component Hierarchy
@@ -163,10 +161,6 @@ client
      |__Index.css
 
 ```
-
-#### Component Tree
-
-https://whimsical.com/p4-XENZGCryWN8Z14XcTNLfvY
 
 #### Time Estimates
 
