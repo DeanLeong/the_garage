@@ -106,6 +106,8 @@ https://www.figma.com/file/iHCOw9l8Z2Po8goXsGKw2P/Untitled?node-id=0%3A1
 
 https://whimsical.com/p4-XENZGCryWN8Z14XcTNLfvY
 
+![Image of Component Tree](https://github.com/DeanLeong/the_garage/blob/main/wireframes/Screen%20Shot%202020-11-29%20at%209.13.27%20AM.png)
+
 #### Component Hierarchy
 
 > Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
