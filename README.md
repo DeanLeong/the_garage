@@ -31,7 +31,7 @@ The Garage is an app that is focused on helping users manage their motorcycle's 
 ## MVP
 
 
-1 - A users concept. (Table 1)
+1 - A users concept. OR Parts(Table 1)
 
 2 - One+ motorcycle per user. (Table 2)
 
@@ -146,6 +146,7 @@ client
           |__ auth.js
           |__ motorcycles.js
           |__ maintenanceNotes.js
+          |__ parts.js
      |__App.js
      |__App.css
      |__Index.js
@@ -179,7 +180,7 @@ client
 
 https://app.diagrams.net/?libs=general;uml#G1srwXfq0TkSBgOqrirRop1_9kiKZA5Zm9
 
-![Image of ERD](https://github.com/DeanLeong/the_garage/blob/main/wireframes/Screen%20Shot%202020-11-28%20at%201.16.31%20PM.png)
+![Image of ERD](https://github.com/DeanLeong/the_garage/blob/main/wireframes/updatedERD.png)
 
 <br>
 
@@ -187,7 +188,7 @@ https://app.diagrams.net/?libs=general;uml#G1srwXfq0TkSBgOqrirRop1_9kiKZA5Zm9
 
 ## Post-MVP
 
-1 - Add "Motorcycle Parts" to the motorcycle's page. Can add images of desired parts etc.
+1 - Add a users concept OR Add "Motorcycle Parts" to the motorcycle's page. Can add images of desired parts etc.
 
 2 - A history page to see notes after they are deleted.
 
