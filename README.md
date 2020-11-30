@@ -72,23 +72,23 @@ The MVP goals are to have a user concept, one motorcycle per user and one motorc
 
 https://www.figma.com/file/iHCOw9l8Z2Po8goXsGKw2P/Untitled?node-id=0%3A1
 
-![Image of Homepage](https://github.com/DeanLeong/the_garage/blob/main/wireframes/p4home.png)
+![Image of Homepage](https://github.com/DeanLeong/the_garage/blob/main/wireframes/homescreen.png)
 
 - Desktop Homepage
 
-![Image of MC Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/p4mcpage.png)
+![Image of MC Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/notesscreen.png)
 
 - Desktop MC Page
 
-![Image of add MC Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/p4addmcpage.png)
+![Image of add MC Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/addscreen.png)
 
 - Add MC Page
 
-![Image of Login Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/updatedlogin.png)
+![Image of Login Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/loginscreen.png)
 
 - Login Page
 
-![Image of Register Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/p4register.png)
+![Image of Register Page](https://github.com/DeanLeong/the_garage/blob/main/wireframes/registerscreen.png)
 
 - Register Page
 
