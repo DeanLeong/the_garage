@@ -1,0 +1,2 @@
+class MaintenanceNotesController < ApplicationController
+end
