@@ -92,6 +92,8 @@ https://www.figma.com/file/iHCOw9l8Z2Po8goXsGKw2P/Untitled?node-id=0%3A1
 
 - Register Page
 
+Color Template - https://coolors.co/d64045-e9fff9-9ed8db-467599-1d3354
+
 #### Component Tree
 
 https://whimsical.com/p4-XENZGCryWN8Z14XcTNLfvY
