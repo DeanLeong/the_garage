@@ -1,5 +1,7 @@
 class MotorcyclesController < ApplicationController
   
+  before_action :set_motorcycle, only: [:show, :update, :destroy]
+
   #GET /motorcycles
   def index
     @motorcycles = Motorcycle.all

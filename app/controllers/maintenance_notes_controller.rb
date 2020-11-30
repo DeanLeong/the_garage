@@ -1,5 +1,7 @@
 class MaintenanceNotesController < ApplicationController
 
+  before_action :set_maintenance_note, only: [:show, :update, :destroy]
+
   def index
     @maintenance_notes = MaintenanceNote.all
     
