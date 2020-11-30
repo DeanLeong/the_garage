@@ -42,4 +42,5 @@ class MaintenanceNotesController < ApplicationController
 
   def maintenance_note_params
     params.require(:maintenance_note).permit(:content, :motorcycle_id)
+  end
 end
