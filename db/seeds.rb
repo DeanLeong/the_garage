@@ -21,3 +21,9 @@ puts "#{User.count} users created"
   user: @user)
 
 puts "#{Motorcycle.count} motorcycles created"
+
+@maintenance_note = MaintenanceNote.create!(
+  content: 'Needs more chrome',
+  motorcycle: @motorcycle)
+
+puts "#{MaintenanceNote.count} notes created"
