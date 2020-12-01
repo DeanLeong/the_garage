@@ -10,7 +10,7 @@
 @user1 = User.create!(
   username: 'dean', 
   email: 'dean@gmail.com', 
-  image_url: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/08/17/09/peter-fonda-easy-rider.jpg?width=990', 
+  img_url: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/08/17/09/peter-fonda-easy-rider.jpg?width=990', 
   password: '123456')
 
 puts "#{User.count} users created"
