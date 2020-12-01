@@ -10,7 +10,7 @@ export const getOneMaintenance_note = async (id) => {
   return resp.data
 }
 
-export const postMaintenance_note = async (maintenance_noteData) => {
+export const postMaintenance_note = async (id, maintenance_noteData) => {
   const resp = await api.post(`/motorcycles/${id}/maintenance_notes`, { maintenance_note: maintenance_noteData })
   return resp.data
 }

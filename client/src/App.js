@@ -93,23 +93,29 @@ function App() {
     //   handleLogout={handleLogout}
     // >
      
-      <div className="app">
-        <Route path="/">
-          {/* login */}
+    <div className="app">
+      <Switch>
+        <Route exact path="/">
           <Login handleLogin={handleLogin} />
         </Route>
 
         <Route path='/register'>
-          {/* register */}
           <Register handleRegister={handleRegister} />
         </Route>
 
-        <Route path='/'>
-          {/* container */}
-          <MainContainer currentUser={currentUser} />
+        <Route path='/home'>
+          <Home currentUser={currentUser} />
         </Route>
 
-        </div>
+       <Route path='/mcnotes'>
+        <McNotes handleCreate={maintenance_noteHandleCreate}/> 
+       </Route>
+      
+      <Route path='notesdetail'>
+        <NotesDetail handleUpdate={maintenance_notehandleUpdate} handleDelete={maintenance_noteHandleDelete}/>
+      </Route>
+    </Switch>
+     </div>
     // </Layout>
   );
 }
