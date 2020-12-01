@@ -1,6 +1,8 @@
 class MotorcyclesController < ApplicationController
   
   before_action :set_motorcycle, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
+  # before_action :set_user_motorcycle, only [:create, :update, :destroy]
 
   #GET /motorcycles
   def index
@@ -16,6 +18,7 @@ class MotorcyclesController < ApplicationController
 
   def create
     @motorcycle = Motorcycle.new(motorcycle_params)
+    @motorcycle.user = @current_user
 
     if @motorcycle.save
       render json: @motorcycle, status: :created
@@ -43,6 +46,6 @@ class MotorcyclesController < ApplicationController
   end
 
   def motorcycle_params
-    params.require(:motorcycle).permit(:name, :img_url, :user_id)
+    params.require(:motorcycle).permit(:motorcycle).merge(user_id: @current_user.id)
   end
 end

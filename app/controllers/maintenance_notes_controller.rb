@@ -1,6 +1,7 @@
 class MaintenanceNotesController < ApplicationController
 
   before_action :set_maintenance_note, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   def index
     @maintenance_notes = MaintenanceNote.all
@@ -14,7 +15,7 @@ class MaintenanceNotesController < ApplicationController
 
   def create
     @maintenance_note = MaintenanceNote.new(maintenance_note_params)
-
+    @maintenance_note = @motorcycle.maintenance_note(maintenance_note_params)
     if @maintenance_note.save
       render json: @maintenance_note, status: :created
     else
@@ -41,6 +42,6 @@ class MaintenanceNotesController < ApplicationController
   end
 
   def maintenance_note_params
-    params.require(:maintenance_note).permit(:content, :motorcycle_id)
+    params.require(:maintenance_note).permit(:maintenance_note).merge(motorcycle_id: :motorcycle_id)
   end
 end
