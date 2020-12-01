@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import './Login.css'
 
 function Login(props) {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ function Login(props) {
 
   return (
     <div>
-      <h1>HELLO DEAN</h1>
+      <h1>Welcome to The Garage!</h1>
     <form onSubmit={(e) => {
       e.preventDefault();
       props.handleLogin(formData);
