@@ -28,11 +28,11 @@ puts "#{User.count} users created"
 puts "#{Motorcycle.count} motorcycles created"
 
 @maintenance_note1 = MaintenanceNote.create!(
-  content: 'Needs more chrome',
+  content: 'Needs more chrome.',
   motorcycle: @motorcycle1)
 
 @maintenance_note2 = MaintenanceNote.create!(
-  content: 'Slap a new exhaust on that bad boi',
+  content: "Can't improve on perfection.",
   motorcycle: @motorcycle2)
 
 puts "#{MaintenanceNote.count} notes created"
