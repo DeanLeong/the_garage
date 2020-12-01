@@ -8,6 +8,8 @@ import Login from '../screens/Login'
 import McNotes from '../screens/McNotes'
 import NotesDetail from '../screens/NotesDetail'
 import Register from '../screens/Register'
+import { getAllMotorcycles } from '../services/motorcycles'
+// import {  }
 
 function MainContainer(props) {
   return (
