@@ -1,6 +1,7 @@
 class MaintenanceNotesController < ApplicationController
 
   before_action :set_maintenance_note, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   def index
     @maintenance_notes = MaintenanceNote.all
@@ -12,8 +13,19 @@ class MaintenanceNotesController < ApplicationController
     render json: @maintenance_note
   end
 
+  # def create
+  #   @maintenance_note = MaintenanceNote.new(maintenance_note_params)
+  #   @maintenance_note = @motorcycle.maintenance_note(maintenance_note_params)
+  #   if @maintenance_note.save
+  #     render json: @maintenance_note, status: :created
+  #   else
+  #     render json: @maintenance_note.errors, status: :unprocessable_entity
+  #   end
+  # end
+
   def create
-    @maintenance_note = MaintenanceNote.new(maintenance_note_params)
+    @motorcycle = Motorcycle.find(params[:motorcycle_id])
+    @maintenance_note = @motorcycle.maintenance_notes.create(maintenance_note_params)
 
     if @maintenance_note.save
       render json: @maintenance_note, status: :created
@@ -21,6 +33,7 @@ class MaintenanceNotesController < ApplicationController
       render json: @maintenance_note.errors, status: :unprocessable_entity
     end
   end
+
 
   def update
     if @maintenance_note.update(maintenance_note_params)
@@ -41,6 +54,6 @@ class MaintenanceNotesController < ApplicationController
   end
 
   def maintenance_note_params
-    params.require(:maintenance_note).permit(:content, :motorcycle_id)
+    params.require(:maintenance_note).permit(:content)
   end
 end

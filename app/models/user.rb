@@ -7,5 +7,5 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }
 
   has_many :motorcycles
-  has_many :maintenance_notes, through: :motorcycles
+  has_many :maintenance_notes
 end
