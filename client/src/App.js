@@ -64,7 +64,6 @@ function App() {
     }
     fetchMaintenance_notes()
   }, [])
-
   
   const motorcycleHandleCreate = async (motorcycleData) => {
     const newMotorcycle = await postMotorcycle(motorcycleData)

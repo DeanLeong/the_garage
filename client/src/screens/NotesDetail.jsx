@@ -1,18 +1,28 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import {Link, useParams} from 'react-router-dom'
+import { getAllMaintenance_notes } from '../services/maintenance_notes';
 
-function NotesDetail(props) {
-  console.log(props)
+function NotesDetail({maintenance_notes}) {
+  const [notes, setNotes] = useState([])
+  //console.log(maintenance_notes)
+  const { id } = useParams()
+
+  useEffect(() => {
+    if (maintenance_notes.length) {
+      const getNotes = maintenance_notes.filter((note) => note.motorcycle_id === Number(id))
+      setNotes(getNotes)
+      console.log(notes)
+    }
+  }, [id])
+
   return (
-    <div>
-      <h2>Hi Dean</h2>
-       {/* {
-        props.maintenance_notes.map(maintenance_note => (
-          <div key={maintenance_note.id}>
-            <p>{maintenance_note.content}</p>
-          </div>
+    <div className="notes-detail-container">
+      <h2>Update or Delete your note!</h2>
+      {
+        notes.map(note => (
+          <p>{note.content}</p>
         ))
-      } */}
+       }
     </div>
   );
 }
