@@ -10,7 +10,7 @@ export const getOneMotorcycle = async (id) => {
   return resp.data
 }
 
-export const postMotorcycle = async (motorcycleData) => {
+export const postMotorcycle = async (id, motorcycleData) => {
   const resp = await api.post(`/users/${id}/motorcycles`, { motorcycle: motorcycleData })
   return resp.data
 }
