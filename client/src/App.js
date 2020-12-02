@@ -52,7 +52,7 @@ function App() {
 
   useEffect(() => {
     const fetchMotorcycles = async () => {
-      const motorcycleData = await getAllMotorcycles()
+      const motorcycleData = await getAllMotorcycles(currentUser)
       setMotorcycles(motorcycleData)
     }
     const fetchMaintenance_notes = async () => {
