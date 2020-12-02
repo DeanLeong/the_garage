@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom'
 
 import './App.css';
-import MainContainer from './containers/MainContainer'
 import Layout from './layouts/Layout'
 import Login from './screens/Login'
 import Register from './screens/Register'
-import AddMc from './screens/AddMc'
+//import AddMc from './screens/AddMc'
 import Home from './screens/Home'
 import McNotes from './screens/McNotes'
 import NotesDetail from './screens/NotesDetail'
@@ -52,17 +51,22 @@ function App() {
   }
 
   useEffect(() => {
-    const fetchMotorcycles = async () => {
-      const motorcycleData = await getAllMotorcycles()
-      setMotorcycles(motorcycleData)
-    }
+    // const fetchMotorcycles = async () => {
+    //   const motorcycleData = await getAllMotorcycles()
+    //   setMotorcycles(motorcycleData)
+    // }
     const fetchMaintenance_notes = async () => {
       const maintenance_noteData = await getAllMaintenance_notes()
       setMaintenance_notes(maintenance_noteData)
     }
-    fetchMotorcycles()
+    // fetchMotorcycles()
     fetchMaintenance_notes()
   }, [])
+
+  const fetchMotorcycles = async () => {
+    const motorcycleData = await getAllMotorcycles()
+    setMotorcycles(motorcycleData)
+  }
   
   const motorcycleHandleCreate = async (motorcycleData) => {
     const newMotorcycle = await postMotorcycle(motorcycleData)
@@ -89,7 +93,8 @@ function App() {
     setMaintenance_notes(prevState => prevState.filter(maintenance_note => maintenance_note.id !== id))
   }
 
-  console.log(currentUser)
+  // console.log(currentUser)
+  console.log(motorcycles)
 
   return (
     <div className="app">
@@ -107,11 +112,11 @@ function App() {
         </Route>
 
         <Route path='/home'>
-          <Home currentUser={currentUser} />
+            <Home currentUser={currentUser} handleCreate={motorcycleHandleCreate} motorcycles={motorcycles}/>
         </Route>
 
        <Route path='/mcnotes'>
-        <McNotes handleCreate={maintenance_noteHandleCreate}/> 
+            <McNotes handleCreate={maintenance_noteHandleCreate} maintenance_notes={maintenance_notes}/> 
        </Route>
       
       <Route path='notesdetail'>
