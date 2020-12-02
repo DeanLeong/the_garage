@@ -65,10 +65,10 @@ function App() {
     fetchMaintenance_notes()
   }, [])
 
-  const fetchMotorcycles = async () => {
-    const motorcycleData = await getAllMotorcycles(currentUser)
-    setMotorcycles(motorcycleData)
-  }
+  // const fetchMotorcycles = async () => {
+  //   const motorcycleData = await getAllMotorcycles(currentUser)
+  //   setMotorcycles(motorcycleData)
+  // }
 
   
   const motorcycleHandleCreate = async (motorcycleData) => {
@@ -124,7 +124,7 @@ function App() {
       
       <Route path='notesdetail'>
         <NotesDetail currentUser={currentUser} handleUpdate={maintenance_notehandleUpdate} handleDelete={maintenance_noteHandleDelete}/>
-        </Route> 
+      </Route> 
         </Switch>
     </Layout>
      </div>
