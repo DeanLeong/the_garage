@@ -118,7 +118,7 @@ function App() {
         </Route>
 
        <Route path={`/motorcycles/:id`}>
-            <McNotes motorcycles={motorcycles} currentUser={currentUser} handleCreate={maintenance_noteHandleCreate} maintenance_notes={maintenance_notes}/> 
+            <McNotes currentUser={currentUser} motorcycles={motorcycles} handleCreate={maintenance_noteHandleCreate} maintenance_notes={maintenance_notes}/> 
        </Route>
       
       <Route path='notesdetail'>
