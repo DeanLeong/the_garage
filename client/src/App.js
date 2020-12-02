@@ -51,15 +51,17 @@ function App() {
   }
 
   useEffect(() => {
-    // const fetchMotorcycles = async () => {
-    //   const motorcycleData = await getAllMotorcycles()
-    //   setMotorcycles(motorcycleData)
-    // }
+    const fetchMotorcycles = async () => {
+      const motorcycleData = await getAllMotorcycles()
+      setMotorcycles(motorcycleData)
+    }
     const fetchMaintenance_notes = async () => {
       const maintenance_noteData = await getAllMaintenance_notes()
       setMaintenance_notes(maintenance_noteData)
     }
-    // fetchMotorcycles()
+    if (currentUser) {
+      fetchMotorcycles()
+    }
     fetchMaintenance_notes()
   }, [])
 
@@ -116,11 +118,11 @@ function App() {
         </Route>
 
        <Route path='/mcnotes'>
-            <McNotes handleCreate={maintenance_noteHandleCreate} maintenance_notes={maintenance_notes}/> 
+            <McNotes currentUser={currentUser} handleCreate={maintenance_noteHandleCreate} maintenance_notes={maintenance_notes}/> 
        </Route>
       
       <Route path='notesdetail'>
-        <NotesDetail handleUpdate={maintenance_notehandleUpdate} handleDelete={maintenance_noteHandleDelete}/>
+        <NotesDetail currentUser={currentUser} handleUpdate={maintenance_notehandleUpdate} handleDelete={maintenance_noteHandleDelete}/>
         </Route> 
         </Switch>
     </Layout>

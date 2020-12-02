@@ -7,6 +7,7 @@ export default function Layout(props) {
       <Header
         currentUser={props.currentUser}
         handleLogout={props.handleLogout}
+        // motorcycles={props.motorcycles}
       />
       {props.children}
       <Footer />
