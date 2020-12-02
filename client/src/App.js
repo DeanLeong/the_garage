@@ -56,7 +56,7 @@ function App() {
       setMotorcycles(motorcycleData)
     }
     const fetchMaintenance_notes = async () => {
-      const maintenance_noteData = await getAllMaintenance_notes()
+      const maintenance_noteData = await getAllMaintenance_notes(motorcycles.id)
       setMaintenance_notes(maintenance_noteData)
     }
     if (currentUser) {
@@ -65,10 +65,10 @@ function App() {
     fetchMaintenance_notes()
   }, [])
 
-  const fetchMotorcycles = async () => {
-    const motorcycleData = await getAllMotorcycles(currentUser)
-    setMotorcycles(motorcycleData)
-  }
+  // const fetchMotorcycles = async () => {
+  //   const motorcycleData = await getAllMotorcycles(currentUser)
+  //   setMotorcycles(motorcycleData)
+  // }
   
   const motorcycleHandleCreate = async (motorcycleData) => {
     const newMotorcycle = await postMotorcycle(motorcycleData)
@@ -96,7 +96,7 @@ function App() {
   }
 
   // console.log(currentUser)
-  console.log(motorcycles)
+  //console.log(motorcycles)
 
   return (
     <div className="app">
@@ -117,8 +117,8 @@ function App() {
             <Home currentUser={currentUser} handleCreate={motorcycleHandleCreate} motorcycles={motorcycles}/>
         </Route>
 
-       <Route path='/mcnotes'>
-            <McNotes currentUser={currentUser} handleCreate={maintenance_noteHandleCreate} maintenance_notes={maintenance_notes}/> 
+       <Route path={`/motorcycles/:id`}>
+            <McNotes motorcycles={motorcycles} currentUser={currentUser} handleCreate={maintenance_noteHandleCreate} maintenance_notes={maintenance_notes}/> 
        </Route>
       
       <Route path='notesdetail'>
