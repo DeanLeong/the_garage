@@ -1,3 +1,8 @@
-* {
-  text-align: center;
+.login-container {
+  background-color: #e9fff9;
+  height: 75vw;
+}
+
+.welcome {
+  margin-top: 0vw;
 }

@@ -18,8 +18,8 @@ function Login(props) {
   }
 
   return (
-    <div>
-      <h1>Welcome to The Garage!</h1>
+    <div className="login-container">
+      <h1 className="welcome">Welcome to The Garage!</h1>
     <form onSubmit={(e) => {
       e.preventDefault();
       props.handleLogin(formData);

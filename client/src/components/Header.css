@@ -1,0 +1,20 @@
+.header {
+  display: -webkit-flex;
+  background-color: #d64045;
+  height: 8vw;
+  width: 100vw;
+}
+
+.logout-button {
+  height: 2.5vw;
+  margin-left: 80vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  background-color: #1d3354;
+  color: white;
+}
+
+.header-title {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
