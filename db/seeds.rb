@@ -16,7 +16,7 @@
 puts "#{User.count} users created"
 
 @motorcycle1 = Motorcycle.create!(
-  name: 'Captian America', 
+  name: 'Captain America', 
   img_url: 'https://ca-times.brightspotcdn.com/dims4/default/3d51842/2147483647/strip/true/crop/2048x1559+0+0/resize/840x639!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6d%2Fae%2F9c3e66ea01994a7a64a95622a497%2Fla-fi-hy-easy-rider-motorcycle-headed-to-aucti-001', 
   user: @user1)
 

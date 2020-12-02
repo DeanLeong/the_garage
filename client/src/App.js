@@ -59,16 +59,11 @@ function App() {
       const maintenance_noteData = await getAllMaintenance_notes(motorcycles.id)
       setMaintenance_notes(maintenance_noteData)
     }
-    if (currentUser) {
+    if (currentUser !== null) {
       fetchMotorcycles()
     }
     fetchMaintenance_notes()
   }, [])
-
-  // const fetchMotorcycles = async () => {
-  //   const motorcycleData = await getAllMotorcycles(currentUser)
-  //   setMotorcycles(motorcycleData)
-  // }
 
   
   const motorcycleHandleCreate = async (motorcycleData) => {
@@ -96,8 +91,8 @@ function App() {
     setMaintenance_notes(prevState => prevState.filter(maintenance_note => maintenance_note.id !== id))
   }
 
-  console.log(currentUser)
-  console.log(motorcycles)
+  //console.log(currentUser)
+  //console.log(motorcycles)
 
   return (
     <div className="app">
@@ -106,24 +101,24 @@ function App() {
       handleLogout={handleLogout}
     >
       <Switch>
-        <Route exact path="/">
+          <Route exact path="/">
           <Login handleLogin={handleLogin} />
         </Route>
 
-        <Route path='/register'>
+        <Route exact path='/register'>
           <Register handleRegister={handleRegister} />
         </Route>
 
-        <Route path='/home'>
+        <Route exact path='/home'>
             <Home currentUser={currentUser} handleCreate={motorcycleHandleCreate} motorcycles={motorcycles}/>
         </Route>
 
-       <Route path={`/motorcycles/:id`}>
+       <Route exact path={`/motorcycles/:id`}>
             <McNotes currentUser={currentUser} motorcycles={motorcycles} handleCreate={maintenance_noteHandleCreate} maintenance_notes={maintenance_notes}/> 
        </Route>
       
-      <Route path='notesdetail'>
-        <NotesDetail currentUser={currentUser} handleUpdate={maintenance_notehandleUpdate} handleDelete={maintenance_noteHandleDelete}/>
+      <Route exact path={`/motorcycles/:id/notesdetail`} component={NotesDetail}>
+        <NotesDetail currentUser={currentUser} motorcycles={motorcycles}  maintenance_notes={maintenance_notes} handleUpdate={maintenance_notehandleUpdate} handleDelete={maintenance_noteHandleDelete}/>
       </Route> 
         </Switch>
     </Layout>

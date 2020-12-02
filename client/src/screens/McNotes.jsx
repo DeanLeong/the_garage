@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './McNotes.css'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { getOneMotorcycle } from "../services/motorcycles"
 
 function McNotes({ motorcycles }) {
   const [motorcycle, setMotorcycle] = useState({})
   //console.log(motorcycles)
   const { id } = useParams()
-  console.log(id)
+  //console.log(id)
 
   // useEffect(() => {
   //   const getData = async () => {
@@ -29,18 +29,12 @@ function McNotes({ motorcycles }) {
   return (
     <div className="notes-container">
       <h3 className='notes-title'>See Notes for: </h3>
-      {
-        motorcycles.map(motorcycle => (
           <div key={motorcycle.id}>
             <img src={motorcycle.img_url} className="mc-img"/><p>{motorcycle.name}</p>
            { motorcycle.maintenance_notes && motorcycle.maintenance_notes.map(note => (
-              <p>
-                {note.content}
-              </p>
+                <Link to={`/motorcycles/${id}/notesdetail`}  className="note">{note.content}</Link>
             )) }
           </div>
-        ))
-      }
     </div>
   );
 }
