@@ -64,11 +64,6 @@ function App() {
     }
     fetchMaintenance_notes()
   }, [])
-
-  // const fetchMotorcycles = async () => {
-  //   const motorcycleData = await getAllMotorcycles(currentUser)
-  //   setMotorcycles(motorcycleData)
-  // }
   
   const motorcycleHandleCreate = async (motorcycleData) => {
     const newMotorcycle = await postMotorcycle(motorcycleData)
