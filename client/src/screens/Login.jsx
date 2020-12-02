@@ -6,14 +6,14 @@ import './Login.css'
 function Login(props) {
   const [formData, setFormData] = useState({
     username: "",
-    password: ""
+    password: "",
   })
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }))
   }
 
@@ -45,7 +45,7 @@ function Login(props) {
       <br />
       <Link to='/register'>Register</Link>
         
-      <Link to='/home'><button>Submit</button></Link>
+      <button>Submit</button>
       </form>
     </div>
   );

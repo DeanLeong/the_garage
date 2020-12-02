@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom'
 
 import './App.css';
@@ -10,6 +10,7 @@ import AddMc from './screens/AddMc'
 import Home from './screens/Home'
 import McNotes from './screens/McNotes'
 import NotesDetail from './screens/NotesDetail'
+
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
 import { getAllMotorcycles, postMotorcycle } from './services/motorcycles'
 import { destroyMaintenance_note, getAllMaintenance_notes, postMaintenance_note, putMaintenance_note } from './services/maintenance_notes'
@@ -34,13 +35,13 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData)
     setCurrentUser(userData)
-    history.push('/')
+    history.push('/home')
   }
 
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData)
     setCurrentUser(userData)
-    history.push('/')
+    history.push('/home')
   }
 
   const handleLogout = async (registerData) => {
@@ -87,13 +88,14 @@ function App() {
     setMaintenance_notes(prevState => prevState.filter(maintenance_note => maintenance_note.id !== id))
   }
 
+  console.log(currentUser)
+
   return (
-    // <Layout
-    //   currentUser={currentUser}
-    //   handleLogout={handleLogout}
-    // >
-     
     <div className="app">
+    <Layout
+      currentUser={currentUser}
+      handleLogout={handleLogout}
+    >
       <Switch>
         <Route exact path="/">
           <Login handleLogin={handleLogin} />
@@ -113,10 +115,10 @@ function App() {
       
       <Route path='notesdetail'>
         <NotesDetail handleUpdate={maintenance_notehandleUpdate} handleDelete={maintenance_noteHandleDelete}/>
-      </Route>
-    </Switch>
+        </Route> 
+        </Switch>
+    </Layout>
      </div>
-    // </Layout>
   );
 }
 
