@@ -66,7 +66,7 @@ function App() {
   }, [])
 
   const fetchMotorcycles = async () => {
-    const motorcycleData = await getAllMotorcycles()
+    const motorcycleData = await getAllMotorcycles(currentUser)
     setMotorcycles(motorcycleData)
   }
   
