@@ -44,10 +44,11 @@ function App() {
     history.push('/home')
   }
 
-  const handleLogout = async (registerData) => {
-    const userData = await registerUser(registerData)
-    setCurrentUser(userData)
-    history.push('/')
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
+    history.push('/');
   }
 
   useEffect(() => {
