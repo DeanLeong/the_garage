@@ -10,7 +10,7 @@ function McNotes(props) {
       {
         props.maintenance_notes.map(maintenance_note => (
           <div key={maintenance_note.id}>
-            <p>{maintenance_note.content}</p>
+            <Link to='/notesdetail' className="note"><p>{maintenance_note.content}</p></Link>
           </div>
         ))
       }
