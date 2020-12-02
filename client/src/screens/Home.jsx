@@ -7,11 +7,11 @@ function Home(props) {
   console.log(props)
   return (
     <div className="home-container">
-      <h1>See All Motorcycles</h1>
+      <h1 className="see-all">See All Motorcycles</h1>
       {
         props.motorcycles.map(motorcycle => (
           <div key={motorcycle.id}>
-            <Link to={`/motorcycles/${motorcycle.id}`}><img src={motorcycle.img_url}/><p>{motorcycle.name}</p></Link>
+            <Link to={`/motorcycles/${motorcycle.id}`} className="mc-link"><img src={motorcycle.img_url} className="mc-img"/><p>{motorcycle.name}</p></Link>
           </div>
         ))
       }
@@ -22,3 +22,4 @@ function Home(props) {
 export default Home;
 
 // import get motorcycles from wherever it is
+//How to get user on this?

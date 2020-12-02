@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react'
+import './Register.css'
 
 function Register(props) {
     const [formData, setFormData] = useState({
@@ -16,12 +17,13 @@ function Register(props) {
       }))
     }
   
-    return (
+  return (
+      <div className="register-container">
       <form onSubmit={(e) => {
         e.preventDefault();
         props.handleRegister(formData);
       }}>
-        <h3>Register</h3>
+        <h3 className="register-title">Register</h3>
         <label>Username:
           <input
             type='text'
@@ -51,6 +53,7 @@ function Register(props) {
         <br />
         <button>Submit</button>
       </form>
+      </div>
   );
 }
 

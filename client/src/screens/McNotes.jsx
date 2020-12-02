@@ -6,7 +6,7 @@ function McNotes(props) {
   console.log(props)
   return (
     <div className="notes-container">
-      <h3>See Notes for: </h3>
+      <h3 className='notes-title'>See Notes for: </h3>
       {
         props.maintenance_notes.map(maintenance_note => (
           <div key={maintenance_note.id}>
@@ -19,3 +19,6 @@ function McNotes(props) {
 }
 
 export default McNotes;
+
+//How to get notes to render only for their specific motorcycle?
+//Show that MC picture and name

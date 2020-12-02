@@ -64,6 +64,12 @@ function App() {
     }
     fetchMaintenance_notes()
   }, [])
+
+  const fetchMotorcycles = async () => {
+    const motorcycleData = await getAllMotorcycles(currentUser)
+    setMotorcycles(motorcycleData)
+  }
+
   
   const motorcycleHandleCreate = async (motorcycleData) => {
     const newMotorcycle = await postMotorcycle(motorcycleData)
@@ -90,8 +96,8 @@ function App() {
     setMaintenance_notes(prevState => prevState.filter(maintenance_note => maintenance_note.id !== id))
   }
 
-  // console.log(currentUser)
-  //console.log(motorcycles)
+  console.log(currentUser)
+  console.log(motorcycles)
 
   return (
     <div className="app">
