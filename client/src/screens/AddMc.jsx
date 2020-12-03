@@ -10,7 +10,8 @@ function AddMc(props) {
   })
   const [isCreated, setCreated] = useState(false)
   console.log(props)
-  const {id, user_id } = useParams()
+  const { id, user_id } = useParams()
+  const history = useHistory()
 
   console.log(id)
 
@@ -28,10 +29,11 @@ function AddMc(props) {
     event.preventDefault()
     const created = await postMotorcycle(motorcycle)
     setCreated({ created })
+    history.push(`/home`)
   }
-  if (isCreated) {
-    return <Redirect to={'/home'} />
-  }
+  // if (isCreated) {
+  //   return <Redirect to={'/home'} />
+  // }
 
 
 

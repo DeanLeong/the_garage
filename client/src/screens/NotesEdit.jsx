@@ -40,7 +40,7 @@ function NotesEdit(props) {
   }
 
   if (isUpdated) {
-    return <Redirect to={`/motorcycles/${motorcycle_id}/notesdetail`} />
+    history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
   }
 
   const maintenance_notehandleUpdate = async (id, maintenance_noteData) => {

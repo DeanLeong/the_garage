@@ -10,6 +10,7 @@
 .mc-img {
   border-radius: 50%;
   height: 15vw;
+  width: 15vw;
 }
 
 .mc-link {
@@ -22,9 +23,9 @@
 }
 
 .moto-container {
-  display: grid;
-  grid-column: 1fr, 1fr, 1fr;
-  grid-row: 1fr, 1fr;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .moto {

@@ -10,7 +10,7 @@
 @user1 = User.create!(
   username: 'dean', 
   email: 'dean@gmail.com', 
-  img_url: 'https://media-exp1.licdn.com/dms/image/C4D35AQEr06kiLnDAsw/profile-framedphoto-shrink_200_200/0?e=1607115600&v=beta&t=JgZ4DMmCyU_CuEa7N-EDOFX5iWF22m88e5FHM2w0ze0', 
+  img_url: 'https://scontent-bos3-1.xx.fbcdn.net/v/t1.0-9/118026499_133504188187187_3141351955455876139_o.jpg?_nc_cat=102&ccb=2&_nc_sid=174925&_nc_ohc=SO15iwEzsgwAX_uAEAu&_nc_ht=scontent-bos3-1.xx&oh=ce04dfc932a4634806cb9e5e95559756&oe=5FEFEBF9', 
   password: '123456')
 
 puts "#{User.count} users created"
