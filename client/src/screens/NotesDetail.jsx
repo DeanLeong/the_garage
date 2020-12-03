@@ -37,14 +37,6 @@ function NotesDetail(props) {
     setIsDeleted(!isDeleted)
   }
 
-  const maintenance_notehandleUpdate = async (id, maintenance_noteData) => {
-    const updatedMaintenance_note = await putMaintenance_note(id, maintenance_noteData)
-    setMaintenance_notes(prevState => prevState.map(maintenance_note => {
-      return maintenance_note.id === Number(id) ? updatedMaintenance_note : maintenance_note
-    }))
-    history.push('/maintenance_notes')
-  }
-
   const maintenance_noteHandleCreate = async (maintenance_notesData) => {
     const newMaintenance_note = await postMaintenance_note(maintenance_notesData)
     setMaintenance_notes(prevState => [...prevState, newMaintenance_note])
@@ -55,7 +47,7 @@ function NotesDetail(props) {
   return (
     <div className="notes-detail-container">
       <h2>Add a new note, or Update and Delete your current notes!</h2>
-      <button className="basic-button" onClick={maintenance_noteHandleCreate}>Add Note</button>
+      <Link to={`/motorcycles/${id}/notesdetail/add`}><button className="basic-button">Add Note</button></Link>
       {
         notes.map(note => (
           <p key={note.id}>
@@ -83,3 +75,4 @@ export default NotesDetail;
 //is currently always looking for http://localhost:3000/motorcycles/1/maintenance_notes/1 it is also currently running on load lol
 
 // onClick={maintenance_notehandleUpdate}
+//onClick={maintenance_noteHandleCreate}
