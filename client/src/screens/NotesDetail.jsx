@@ -61,7 +61,7 @@ function NotesDetail(props) {
           <p key={note.id}>
             {note.content}{/* buttons for update and delete */}
             {<button className="basic-button" onClick={() => maintenance_noteHandleDelete(note.id)}>Delete Note</button>}
-            {<Link to={`/motorcycles/${id}/notesdetail/${id}/edit`}><button className="basic-button">Edit Note</button></Link>}
+            {<Link to={`/motorcycles/${id}/notesdetail/${note.id}/edit`}><button className="basic-button">Edit Note</button></Link>}
           </p>
         ))
        }
