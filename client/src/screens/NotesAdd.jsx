@@ -10,6 +10,7 @@ function NotesAdd(props) {
   const [isCreated, setCreated] = useState(false)
   console.log(props)
   const { id, motorcycle_id } = useParams()
+  const history = useHistory()
   
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -23,10 +24,10 @@ function NotesAdd(props) {
     event.preventDefault()
     const created = await postMaintenance_note(motorcycle_id, maintenance_note)
     setCreated({ created })
+    props.setMaintenance_notes(prevState => [...prevState, created])
+    history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
   }
-  if (isCreated) {
-    return <Redirect to={`motorcycles/${motorcycle_id}/notesdetail`} />
-  }
+  
 
   return (
     <div className="notes-add-container">
