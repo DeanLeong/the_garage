@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import {Link, useParams} from 'react-router-dom'
+import {Link, Redirect, useParams} from 'react-router-dom'
 import { getAllMaintenance_notes, destroyMaintenance_note } from '../services/maintenance_notes';
 // import { maintenance_noteHandleDelete, maintenance_noteHandleUpdate } from '../App'
 
 
 function NotesDetail(props) {
-  console.log(props)
   const [notes, setNotes] = useState([])
+  // const [isLoaded, setLoaded] = useState(false)
+  // const [isDeleted, setIsDeleted] = useState(false)
   //console.log(maintenance_notes)
   const { id } = useParams()
 
@@ -18,6 +19,15 @@ function NotesDetail(props) {
     }
   }, [id])
 
+  // const handleDelete = async () => {
+  //   await destroyMaintenance_note(notes.id)
+  //   setIsDeleted(!isDeleted)
+  // }
+
+  // if (!isDeleted) {
+  //   return <Redirect to={'/notesdetail'}
+  // }
+
   return (
     <div className="notes-detail-container">
       <h2>Update or Delete your notes!</h2>
@@ -25,7 +35,7 @@ function NotesDetail(props) {
         notes.map(note => (
           <p>{note.content}{/* buttons for update and delete */}
             {<button className="basic-button" onClick={props.handleDelete}>Delete Note</button>}
-            {<button className="basic-button" >Edit Note</button>}
+            {<button className="basic-button" onClick={props.handleUpdate}>Edit Note</button>}
           </p>
         ))
        }
@@ -38,4 +48,6 @@ export default NotesDetail;
 // onclick={maintenance_noteHandleUpdate}
 
 //refactor code so I can get all props?
-//({mainenance_notes})
+
+//Something deleted mc 1's notes and seeding didn't bring them back
+//took SS of working code refactoring to props
