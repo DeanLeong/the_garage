@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom'
 
 import './App.css';
-import MainContainer from './containers/MainContainer'
 import Layout from './layouts/Layout'
 import Login from './screens/Login'
 import Register from './screens/Register'
-import AddMc from './screens/AddMc'
+//import AddMc from './screens/AddMc'
 import Home from './screens/Home'
 import McNotes from './screens/McNotes'
 import NotesDetail from './screens/NotesDetail'
@@ -44,22 +43,25 @@ function App() {
     history.push('/home')
   }
 
-  const handleLogout = async (registerData) => {
-    const userData = await registerUser(registerData)
-    setCurrentUser(userData)
-    history.push('/')
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
+    history.push('/');
   }
 
   useEffect(() => {
     const fetchMotorcycles = async () => {
-      const motorcycleData = await getAllMotorcycles()
+      const motorcycleData = await getAllMotorcycles(currentUser)
       setMotorcycles(motorcycleData)
     }
     const fetchMaintenance_notes = async () => {
-      const maintenance_noteData = await getAllMaintenance_notes()
+      const maintenance_noteData = await getAllMaintenance_notes(motorcycles.id)
       setMaintenance_notes(maintenance_noteData)
     }
-    fetchMotorcycles()
+    if (currentUser !== null) {
+      fetchMotorcycles()
+    }
     fetchMaintenance_notes()
   }, [])
   
@@ -88,7 +90,8 @@ function App() {
     setMaintenance_notes(prevState => prevState.filter(maintenance_note => maintenance_note.id !== id))
   }
 
-  console.log(currentUser)
+  //console.log(currentUser)
+  //console.log(motorcycles)
 
   return (
     <div className="app">
@@ -97,25 +100,25 @@ function App() {
       handleLogout={handleLogout}
     >
       <Switch>
-        <Route exact path="/">
+          <Route exact path="/">
           <Login handleLogin={handleLogin} />
         </Route>
 
-        <Route path='/register'>
+        <Route exact path='/register'>
           <Register handleRegister={handleRegister} />
         </Route>
 
-        <Route path='/home'>
-          <Home currentUser={currentUser} />
+        <Route exact path='/home'>
+            <Home currentUser={currentUser} handleCreate={motorcycleHandleCreate} motorcycles={motorcycles}/>
         </Route>
 
-       <Route path='/mcnotes'>
-        <McNotes handleCreate={maintenance_noteHandleCreate}/> 
+       <Route exact path={`/motorcycles/:id`}>
+            <McNotes currentUser={currentUser} motorcycles={motorcycles} handleCreate={maintenance_noteHandleCreate} maintenance_notes={maintenance_notes}/> 
        </Route>
       
-      <Route path='notesdetail'>
-        <NotesDetail handleUpdate={maintenance_notehandleUpdate} handleDelete={maintenance_noteHandleDelete}/>
-        </Route> 
+      <Route exact path={`/motorcycles/:id/notesdetail`} component={NotesDetail}>
+        <NotesDetail currentUser={currentUser} motorcycles={motorcycles}  maintenance_notes={maintenance_notes} handleUpdate={maintenance_notehandleUpdate} handleDelete={maintenance_noteHandleDelete}/>
+      </Route> 
         </Switch>
     </Layout>
      </div>

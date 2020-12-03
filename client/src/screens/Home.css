@@ -1,0 +1,17 @@
+.home-container {
+  background-color: #e9fff9;
+  height: 75vw;
+}
+
+.see-all {
+  margin-top: 0;
+}
+
+.mc-img {
+  border-radius: 50%;
+  height: 15vw;
+}
+
+.mc-link {
+  text-decoration: none;
+}

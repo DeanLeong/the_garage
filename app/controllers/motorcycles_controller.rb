@@ -8,12 +8,12 @@ class MotorcyclesController < ApplicationController
   def index
     @motorcycles = Motorcycle.all
 
-    render json: @motorcycles
+    render json: @motorcycles, include: :maintenance_notes, status: :ok
   end
 
   #GET /users/1
   def show
-    render json: @motorcycle
+    render json: @motorcycle, include: :maintenance_notes, status: :ok
   end
 
   def create
