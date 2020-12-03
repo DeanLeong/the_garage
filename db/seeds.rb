@@ -35,4 +35,12 @@ puts "#{Motorcycle.count} motorcycles created"
   content: "Can't improve on perfection.",
   motorcycle: @motorcycle2)
 
+@maintenance_note3 = MaintenanceNote.create!(
+  content: "test 1",
+  motorcycle: @motorcycle1)
+
+@maintenance_note4 = MaintenanceNote.create!(
+  content: "test 2",
+  motorcycle: @motorcycle1)
+
 puts "#{MaintenanceNote.count} notes created"
