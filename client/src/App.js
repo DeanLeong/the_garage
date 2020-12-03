@@ -115,7 +115,7 @@ function App() {
        </Route>
       
       <Route exact path={`/motorcycles/:id/notesdetail`} component={NotesDetail}>
-        <NotesDetail currentUser={currentUser} motorcycles={motorcycles}  maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_notehandleUpdate={maintenance_notehandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete}/>
+            <NotesDetail currentUser={currentUser} motorcycles={motorcycles} maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_notehandleUpdate={maintenance_notehandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete} maintenance_noteHandleCreate={maintenance_noteHandleCreate}/>
       </Route> 
         </Switch>
     </Layout>
