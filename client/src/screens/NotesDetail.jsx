@@ -37,8 +37,8 @@ function NotesDetail(props) {
     setIsDeleted(!isDeleted)
   }
 
-  const maintenance_notehandleUpdate = async (this_id) => {
-    const updatedMaintenance_note = await putMaintenance_note(this_id)
+  const maintenance_notehandleUpdate = async (id, maintenance_noteData) => {
+    const updatedMaintenance_note = await putMaintenance_note(id, maintenance_noteData)
     setMaintenance_notes(prevState => prevState.map(maintenance_note => {
       return maintenance_note.id === Number(id) ? updatedMaintenance_note : maintenance_note
     }))
@@ -61,7 +61,7 @@ function NotesDetail(props) {
           <p key={note.id}>
             {note.content}{/* buttons for update and delete */}
             {<button className="basic-button" onClick={() => maintenance_noteHandleDelete(note.id)}>Delete Note</button>}
-            {<button className="basic-button" onClick={maintenance_notehandleUpdate}>Edit Note</button>}
+            {<Link to={`/motorcycles/${id}/notesdetail/${id}/edit`}><button className="basic-button">Edit Note</button></Link>}
           </p>
         ))
        }
@@ -81,3 +81,5 @@ export default NotesDetail;
 //i need to pass the setnotes use state from app
 
 //is currently always looking for http://localhost:3000/motorcycles/1/maintenance_notes/1 it is also currently running on load lol
+
+// onClick={maintenance_notehandleUpdate}
