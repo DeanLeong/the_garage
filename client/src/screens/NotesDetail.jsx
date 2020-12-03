@@ -4,15 +4,15 @@ import { getAllMaintenance_notes, destroyMaintenance_note } from '../services/ma
 // import { maintenance_noteHandleDelete, maintenance_noteHandleUpdate } from '../App'
 
 
-function NotesDetail({ maintenance_notes }) {
-  console.log(maintenance_notes)
+function NotesDetail(props) {
+  console.log(props)
   const [notes, setNotes] = useState([])
   //console.log(maintenance_notes)
   const { id } = useParams()
 
   useEffect(() => {
-    if (maintenance_notes.length) {
-      const getNotes = maintenance_notes.filter((note) => note.motorcycle_id === Number(id))
+    if (props.maintenance_notes.length) {
+      const getNotes = props.maintenance_notes.filter((note) => note.motorcycle_id === Number(id))
       setNotes(getNotes)
       console.log(notes)
     }
@@ -24,7 +24,7 @@ function NotesDetail({ maintenance_notes }) {
       {
         notes.map(note => (
           <p>{note.content}{/* buttons for update and delete */}
-            {<button className="basic-button" >Delete Note</button>}
+            {<button className="basic-button" onClick={props.handleDelete}>Delete Note</button>}
             {<button className="basic-button" >Edit Note</button>}
           </p>
         ))
@@ -36,3 +36,6 @@ function NotesDetail({ maintenance_notes }) {
 export default NotesDetail;
 // onClick={maintenance_noteHandleDelete}
 // onclick={maintenance_noteHandleUpdate}
+
+//refactor code so I can get all props?
+//({mainenance_notes})
