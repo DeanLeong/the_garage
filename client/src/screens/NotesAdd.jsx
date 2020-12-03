@@ -20,16 +20,26 @@ function NotesAdd(props) {
   
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const created = await postMaintenance_note(maintenance_note)
+    const created = await postMaintenance_note(motorcycle_id, maintenance_note)
     setCreated({ created })
   }
   if (isCreated) {
-    return <Redirect to={`motorcycles/${id}/notesdetail`} />
+    return <Redirect to={`motorcycles/${motorcycle_id}/notesdetail`} />
   }
 
   return (
     <div className="notes-add-container">
-      
+      <form className="create-form" onSubmit={handleSubmit}>
+        <textarea
+          className="add-note"
+          placeholder="Add your note here"
+          value={maintenance_note.content}
+          name="content"
+          required
+          onChange={handleChange}
+        />
+        <button type="submit" className="basic-button">Submit</button>
+      </form>
     </div>
   );
 }
