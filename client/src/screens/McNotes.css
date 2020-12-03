@@ -11,3 +11,8 @@
   text-decoration: none;
   color: black;
 }
+
+.note-box {
+  display: grid;
+  justify-content: center;
+}

@@ -10,8 +10,24 @@
 .mc-img {
   border-radius: 50%;
   height: 15vw;
+  width: 15vw;
 }
 
 .mc-link {
   text-decoration: none;
+}
+
+.user-img {
+  border-radius: 50%;
+  height: 15vw;
+}
+
+.moto-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.moto {
+  margin: 5px;
 }
