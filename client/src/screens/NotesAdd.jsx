@@ -31,6 +31,7 @@ function NotesAdd(props) {
 
   return (
     <div className="notes-add-container">
+      <h2>Add a note here!</h2>
       <form className="create-note-form" onSubmit={handleSubmit}>
         <textarea
           className="add-note"

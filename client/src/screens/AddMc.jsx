@@ -39,6 +39,7 @@ function AddMc(props) {
 
   return (
     <div className='add-mc-container'>
+      <h2>Add a Motorcycle!</h2>
       <form className="create-mc-form" onSubmit={handleSubmit}>
         <input
           className="add-mc-name"

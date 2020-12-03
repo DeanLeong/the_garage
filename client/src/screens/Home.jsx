@@ -15,7 +15,7 @@ function Home(props) {
       <h1 className="see-all">See All Motorcycles</h1>
       <img src={props.currentUser.img_url} className="user-img" />
       <p>{props.currentUser.username}</p>
-      <Link to={`/addmotorcycle`}><button>Add a new motorcycle!</button></Link>
+      <Link to={`/addmotorcycle`}><button className="basic-button">Add a new motorcycle!</button></Link>
       <div className="moto-container">
       {
         props.motorcycles.map(motorcycle => (
