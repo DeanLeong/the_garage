@@ -9,6 +9,7 @@ import Register from './screens/Register'
 import Home from './screens/Home'
 import McNotes from './screens/McNotes'
 import NotesDetail from './screens/NotesDetail'
+import NotesEdit from './screens/NotesEdit'
 
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
 import { getAllMotorcycles, postMotorcycle } from './services/motorcycles'
@@ -59,9 +60,7 @@ function App() {
       const maintenance_noteData = await getAllMaintenance_notes(motorcycles.id)
       setMaintenance_notes(maintenance_noteData)
     }
-    if (currentUser !== null) {
       fetchMotorcycles()
-    }
     fetchMaintenance_notes()
   }, [])
   
@@ -117,7 +116,11 @@ function App() {
        </Route>
       
       <Route exact path={`/motorcycles/:id/notesdetail`} component={NotesDetail}>
-        <NotesDetail currentUser={currentUser} motorcycles={motorcycles}  maintenance_notes={maintenance_notes} handleUpdate={maintenance_notehandleUpdate} handleDelete={maintenance_noteHandleDelete}/>
+          <NotesDetail currentUser={currentUser} motorcycles={motorcycles} maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_notehandleUpdate={maintenance_notehandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete} maintenance_noteHandleCreate={maintenance_noteHandleCreate}/>
+      </Route> 
+          
+      <Route exact path={`/motorcycles/:motorcycle_id/notesdetail/:id/edit`} component={NotesEdit}>
+          <NotesEdit currentUser={currentUser} motorcycles={motorcycles} maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_notehandleUpdate={maintenance_notehandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete} maintenance_noteHandleCreate={maintenance_noteHandleCreate}/>
       </Route> 
         </Switch>
     </Layout>

@@ -32,7 +32,7 @@ function McNotes({ motorcycles }) {
           <div key={motorcycle.id}>
             <img src={motorcycle.img_url} className="mc-img"/><p>{motorcycle.name}</p>
            { motorcycle.maintenance_notes && motorcycle.maintenance_notes.map(note => (
-                <Link to={`/motorcycles/${id}/notesdetail`}  className="note">{note.content}</Link>
+             <Link key={note.id} to={`/motorcycles/${id}/notesdetail`}  className="note">{note.content}</Link>
             )) }
           </div>
     </div>
