@@ -34,7 +34,8 @@ function McNotes({ motorcycles }) {
            { motorcycle.maintenance_notes && motorcycle.maintenance_notes.map(note => (
              <Link key={note.id} to={`/motorcycles/${id}/notesdetail`}  className="note">{note.content}</Link>
             )) }
-          </div>
+      </div>
+      <Link to={`/motorcycles/${id}/notesdetail/add`}><button className="basic-button">Add Note</button></Link>
     </div>
   );
 }
