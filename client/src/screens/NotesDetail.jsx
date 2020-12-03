@@ -6,9 +6,9 @@ import { getAllMaintenance_notes, destroyMaintenance_note } from '../services/ma
 
 function NotesDetail(props) {
   const [notes, setNotes] = useState([])
-  // const [isLoaded, setLoaded] = useState(false)
-  // const [isDeleted, setIsDeleted] = useState(false)
-  //console.log(maintenance_notes)
+  const [isLoaded, setLoaded] = useState(null)
+  const [isDeleted, setIsDeleted] = useState(false)
+  console.log(props)
   const { id } = useParams()
 
   useEffect(() => {
@@ -19,23 +19,26 @@ function NotesDetail(props) {
     }
   }, [id])
 
-  // const handleDelete = async () => {
-  //   await destroyMaintenance_note(notes.id)
-  //   setIsDeleted(!isDeleted)
+  // if (!isLoaded) {
+  //   return <h1>Loading...</h1>
   // }
-
-  // if (!isDeleted) {
-  //   return <Redirect to={'/notesdetail'}
-  // }
+  if (isDeleted) {
+  // return <Redirect to={"/notesdetail"} />
+  }
+  const maintenance_noteHandleDelete = async () => {
+    await destroyMaintenance_note(id)
+    setIsDeleted(!isDeleted)
+  }
 
   return (
     <div className="notes-detail-container">
       <h2>Update or Delete your notes!</h2>
       {
         notes.map(note => (
-          <p>{note.content}{/* buttons for update and delete */}
-            {<button className="basic-button" onClick={props.handleDelete}>Delete Note</button>}
-            {<button className="basic-button" onClick={props.handleUpdate}>Edit Note</button>}
+          <p key={note.id}>
+            {note.content}{/* buttons for update and delete */}
+            {<button className="basic-button" onClick={maintenance_noteHandleDelete}>Delete Note</button>}
+            {<button className="basic-button" onClick={props.maintenance_notehandleUpdate}>Edit Note</button>}
           </p>
         ))
        }
@@ -51,3 +54,7 @@ export default NotesDetail;
 
 //Something deleted mc 1's notes and seeding didn't bring them back
 //took SS of working code refactoring to props
+
+//i need to pass the setnotes use state from app
+
+//is currently always looking for http://localhost:3000/motorcycles/1/maintenance_notes/1 it is also currently running on load lol

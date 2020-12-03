@@ -59,9 +59,7 @@ function App() {
       const maintenance_noteData = await getAllMaintenance_notes(motorcycles.id)
       setMaintenance_notes(maintenance_noteData)
     }
-    if (currentUser !== null) {
       fetchMotorcycles()
-    }
     fetchMaintenance_notes()
   }, [])
   
@@ -117,7 +115,7 @@ function App() {
        </Route>
       
       <Route exact path={`/motorcycles/:id/notesdetail`} component={NotesDetail}>
-        <NotesDetail currentUser={currentUser} motorcycles={motorcycles}  maintenance_notes={maintenance_notes} handleUpdate={maintenance_notehandleUpdate} handleDelete={maintenance_noteHandleDelete}/>
+        <NotesDetail currentUser={currentUser} motorcycles={motorcycles}  maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_notehandleUpdate={maintenance_notehandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete}/>
       </Route> 
         </Switch>
     </Layout>
