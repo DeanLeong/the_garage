@@ -8,6 +8,7 @@ function Home(props) {
   return (
     <div className="home-container">
       <h1 className="see-all">See All Motorcycles</h1>
+      <Link to={`/addmotorcycle`}><button>Add a new motorcycle!</button></Link>
       {
         props.motorcycles.map(motorcycle => (
           <div key={motorcycle.id}>

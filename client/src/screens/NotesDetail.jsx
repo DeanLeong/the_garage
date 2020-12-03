@@ -29,7 +29,7 @@ function NotesDetail(props) {
     return <h1>Loading...</h1>
   }
   if (isDeleted) {
-  return <Redirect to={"/home"} />
+  return <Redirect to={"/notesdetail"} />
   }
 
   const maintenance_noteHandleDelete = async (this_id) => {

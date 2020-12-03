@@ -10,6 +10,7 @@ function NotesAdd(props) {
   const [isCreated, setCreated] = useState(false)
   console.log(props)
   const { id, motorcycle_id } = useParams()
+  
   const handleChange = (event) => {
     const { name, value } = event.target
     setMaintenance_note({
@@ -29,7 +30,7 @@ function NotesAdd(props) {
 
   return (
     <div className="notes-add-container">
-      <form className="create-form" onSubmit={handleSubmit}>
+      <form className="create-note-form" onSubmit={handleSubmit}>
         <textarea
           className="add-note"
           placeholder="Add your note here"
