@@ -45,7 +45,7 @@ function Login(props) {
       <br />
       <Link to='/register'><button className="basic-button">Register</button></Link>
         
-      <button className="basic-button">Submit</button>
+      <button autofocus className="basic-button">Login</button>
       </form>
     </div>
   );

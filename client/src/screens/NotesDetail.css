@@ -8,3 +8,7 @@
   margin-top: 1vh;
   color: white;
 }
+
+.add-notes-container {
+  display: grid;
+}
