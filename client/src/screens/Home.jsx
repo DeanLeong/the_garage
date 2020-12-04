@@ -11,7 +11,7 @@ function Home(props) {
       <img src={props.currentUser.img_url} className="user-img" alt="user profile"/>
       <p className="user-name">{props.currentUser.username}</p>
 
-      <Link to={`/addmotorcycle`}><button className="basic-button">Add a new motorcycle!</button></Link>
+      <Link to={`/addmotorcycle`}><button className="basic-button" id="add-mc-btn">Add a new motorcycle!</button></Link>
 
       <div className="moto-container">
       {
