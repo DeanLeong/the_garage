@@ -29,6 +29,7 @@
 
 .mc-link {
   text-decoration: none;
+  max-height: 30vh;
 }
 
 .user-img {

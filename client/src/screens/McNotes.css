@@ -19,6 +19,12 @@
   display: grid;
 }
 
+.notes-box {
+  display: inline-block;
+  justify-content: center;
+  max-width: 25vw;
+}
+
 #add-note-btn {
   margin-top: 2vh;
 }
