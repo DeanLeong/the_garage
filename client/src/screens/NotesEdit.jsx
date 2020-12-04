@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './NotesEdit.css'
-import { postMaintenance_note, getAllMaintenance_notes, destroyMaintenance_note, putMaintenance_note } from '../services/maintenance_notes';
-import {Link, Redirect, useParams, useHistory} from 'react-router-dom'
+import {putMaintenance_note } from '../services/maintenance_notes';
+import {useParams, useHistory} from 'react-router-dom'
 
 function NotesEdit(props) {
   console.log(props)

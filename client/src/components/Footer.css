@@ -10,3 +10,18 @@
 .h3 {
   margin: 0 auto;
 }
+
+.github-logo {
+  max-width: 10vw;
+  max-height: 10vh;
+}
+
+.linkedin-logo {
+  max-width: 10vw;
+  max-height: 10vh;
+}
+
+.social-a {
+  display: grid;
+  margin: 15px;
+}

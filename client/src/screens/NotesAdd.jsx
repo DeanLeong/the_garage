@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { postMaintenance_note } from '../services/maintenance_notes';
-import {Link, Redirect, useParams, useHistory} from 'react-router-dom'
+import {useParams, useHistory} from 'react-router-dom'
 import './NotesAdd.css'
 
 function NotesAdd(props) {
   const [maintenance_note, setMaintenance_note] = useState({
     content: '',
   })
-  const [isCreated, setCreated] = useState(false)
+  const [created, setCreated] = useState(false)
   console.log(props)
-  const { id, motorcycle_id } = useParams()
+  const {motorcycle_id} = useParams()
   const history = useHistory()
   
   const handleChange = (event) => {
@@ -25,9 +25,11 @@ function NotesAdd(props) {
     const created = await postMaintenance_note(motorcycle_id, maintenance_note)
     setCreated({ created })
     props.setMaintenance_notes(prevState => [...prevState, created])
+  }
+  if (created) {
     history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
   }
-  
+
 
   return (
     <div className="notes-add-container">
