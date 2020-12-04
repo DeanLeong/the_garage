@@ -1,9 +1,10 @@
 .header {
-  display: -webkit-flex;
-  background-color: #d64045;
+  display: flex;
+  background-color: #e37674;
   height: 8vw;
   width: 100vw;
   box-shadow: 0px 0px 5px 5px #467599;
+  margin-bottom: 1vh;
 }
 
 .logout-button {

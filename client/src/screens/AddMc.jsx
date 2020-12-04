@@ -38,7 +38,7 @@ function AddMc(props) {
 
   return (
     <div className='add-mc-container'>
-      <h2>Add a Motorcycle!</h2>
+      <h2 className="add-moto-title">Add a Motorcycle!</h2>
       <form className="create-mc-form" onSubmit={handleSubmit}>
         <input
           className="add-mc-name"
@@ -51,14 +51,14 @@ function AddMc(props) {
         />
         <input
           className="add-mc-img"
-          placeholder="Add an image URL for your Motorcycle"
+          placeholder="Add an image URL"
           value={motorcycle.img_url}
           name="img_url"
           autoFocus
           required
           onChange={handleChange}
         />
-        <button type="submit" className="basic-button">Submit</button>
+        <button type="submit" className="basic-button" id="submit-moto">Submit</button>
       </form>
     </div>
   );

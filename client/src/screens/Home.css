@@ -1,6 +1,15 @@
+.moto-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 0;
+  margin-top: 5vh;
+}
+
 .home-container {
   background-color: #001524;
-  height: 75vw;
+  /* height: 100vw; */
 }
 
 .see-all {
@@ -12,6 +21,8 @@
   border-radius: 50%;
   height: 15vw;
   width: 15vw;
+  margin: 5vw;
+  margin-bottom: 0.5vw;
 }
 
 .mc-link {
@@ -21,12 +32,6 @@
 .user-img {
   border-radius: 50%;
   height: 15vw;
-}
-
-.moto-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 
 .user-name {
@@ -39,6 +44,7 @@
 
 .moto {
   margin: 5px;
+  display: grid;
 }
 
 @media screen and (max-width: 500px) {

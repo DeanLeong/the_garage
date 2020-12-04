@@ -1,18 +1,29 @@
 .notes-container {
-  background-color: #e9fff9;
+  background-color: #001524;
   height: 80vw;
 }
 
 .notes-title {
   margin-top: 0;
+  color: white;
 }
 
 .note {
   text-decoration: none;
-  color: black;
+  color: white;
+  margin-top: 1vh;
 }
 
 .note-box {
   display: grid;
+  justify-content: center;
+}
+
+#add-note-btn {
+  margin-top: 2vh;
+}
+
+.add-notes-container {
+  display: flex;
   justify-content: center;
 }

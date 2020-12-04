@@ -35,17 +35,19 @@ function NotesDetail(props) {
 
   return (
     <div className="notes-detail-container">
-      <h2>Add a new note, or Update and Delete your current notes!</h2>
+      <h2 className="detail-title">Add a new note, or Update and Delete your current notes!</h2>
       <Link to={`/motorcycles/${id}/notesdetail/add`}><button className="basic-button">Add Note</button></Link>
+      <div className="add-notes-container">
       {
         notes.map(note => (
-          <p key={note.id}>
+          <p key={note.id} className="note">
             {note.content}
             {<button className="basic-button" onClick={() => maintenance_noteHandleDelete(note.id)}>Delete Note</button>}
             {<Link to={`/motorcycles/${id}/notesdetail/${note.id}/edit`}><button className="basic-button">Edit Note</button></Link>}
           </p>
         ))
-       }
+        }
+        </div>
     </div>
   );
 }

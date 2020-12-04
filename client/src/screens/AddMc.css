@@ -1,10 +1,20 @@
 .add-mc-container {
-  background-color: #e9fff9;
+  background-color: #001524;
   height: 75vw;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .create-mc-form {
-  display: inline-block;
+  display: inline-grid;
   max-width: 250px;
-  /* margin-left: 40vw; */
+}
+
+.add-moto-title {
+  color: white;
+  margin-top: 0;
+}
+
+#submit-moto {
+  margin-left: 1.5vw;
 }
