@@ -6,3 +6,25 @@
 .welcome {
   margin-top: 0vw;
 }
+
+@media screen and (max-width: 500px) {
+  .welcome {
+    padding-top: 10vw;
+    font-size: 5vw;
+  }
+  .login-form {
+    height: 30vh;
+  }
+
+  .login-container {
+    height: 90vh;
+  }
+
+  h3 {
+    padding-top: 20vw;
+  }
+
+  .basic-button {
+    height: 2.5vh;
+  }
+}

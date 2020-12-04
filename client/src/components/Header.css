@@ -24,3 +24,24 @@
   text-decoration: none;
   color: black;
 }
+
+.basic-button {
+  height: 2.5vh;
+}
+
+@media screen and (max-width: 500px) {
+  .home-container {
+    height: 100vh;
+  }
+
+  .header-title {
+    font-size: 5vw;
+    width: 55vw;
+    margin-right: 0;
+  }
+
+  .logout-button {
+    height: 2.5vh;
+    margin-left: 25vw;
+  }
+}

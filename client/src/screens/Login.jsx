@@ -20,7 +20,7 @@ function Login(props) {
   return (
     <div className="login-container">
       <h1 className="welcome">Welcome to The Garage!</h1>
-    <form onSubmit={(e) => {
+    <form className="login-form" onSubmit={(e) => {
       e.preventDefault();
       props.handleLogin(formData);
     }}>
@@ -43,9 +43,9 @@ function Login(props) {
         />
       </label>
       <br />
-      <Link to='/register'>Register</Link>
+      <Link to='/register'><button className="basic-button">Register</button></Link>
         
-      <button>Submit</button>
+      <button className="basic-button">Submit</button>
       </form>
     </div>
   );

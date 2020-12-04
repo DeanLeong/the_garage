@@ -4,7 +4,7 @@
 }
 
 .create-mc-form {
-  display: grid;
-  max-width: 25vw;
-  margin-left: 40vw;
+  display: inline-block;
+  max-width: 250px;
+  /* margin-left: 40vw; */
 }

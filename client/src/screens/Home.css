@@ -31,3 +31,19 @@
 .moto {
   margin: 5px;
 }
+
+@media screen and (max-width: 500px) {
+  .moto-container {
+    display: grid;
+    grid-column: 1fr, 1fr;
+    margin-bottom: 2.5vh;
+  }
+
+  .home-container {
+    height: 95vh;
+  }
+
+  .header-title {
+    font-size: 5vw;
+  }
+}
