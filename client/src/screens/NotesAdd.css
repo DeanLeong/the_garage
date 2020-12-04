@@ -4,9 +4,8 @@
 }
 
 .create-note-form {
-  display: grid;
+  display: inline-grid;
   max-width: 25vw;
-  margin-left: 35vw;
 }
 
 .add-note-title {
