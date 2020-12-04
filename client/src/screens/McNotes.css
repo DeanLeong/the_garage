@@ -16,7 +16,6 @@
 
 .note-box {
   display: grid;
-  justify-content: center;
 }
 
 #add-note-btn {

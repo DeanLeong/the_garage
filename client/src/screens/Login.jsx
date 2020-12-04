@@ -24,7 +24,7 @@ function Login(props) {
       e.preventDefault();
       props.handleLogin(formData);
     }}>
-      <h3>Login</h3>
+      <h3 className="login">Login</h3>
       <label>Username:
         <input
           type='text'

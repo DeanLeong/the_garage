@@ -1,10 +1,19 @@
 .login-container {
-  background-color: #e9fff9;
+  background-color: #001524;
   height: 75vw;
 }
 
 .welcome {
   margin-top: 0vw;
+  color: white;
+}
+
+label {
+  color: white;
+}
+
+.login {
+  color: white;
 }
 
 @media screen and (max-width: 500px) {
