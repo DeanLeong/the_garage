@@ -1,16 +1,28 @@
+.moto-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 5vh;
+}
+
 .home-container {
-  background-color: #e9fff9;
-  height: 75vw;
+  background-color: #001524;
 }
 
 .see-all {
   margin-top: 0;
+  color: white;
 }
 
 .mc-img {
   border-radius: 50%;
   height: 15vw;
   width: 15vw;
+  margin: 5vw;
+  margin-bottom: 0.5vw;
+  display: ;
 }
 
 .mc-link {
@@ -22,12 +34,42 @@
   height: 15vw;
 }
 
-.moto-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.user-name {
+  color: white;
+}
+
+.moto-name {
+  color: white;
 }
 
 .moto {
   margin: 5px;
+  display: grid;
+}
+
+#add-mc-btn {
+  height: 5vh;
+  width: 25vw;
+}
+
+@media screen and (max-width: 500px) {
+  .moto-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 2.5vh;
+  }
+
+  .home-container {
+    height: 100vh;
+  }
+
+  .header-title {
+    font-size: 5vw;
+    margin-bottom: 0;
+  }
+
+  .header {
+    margin-bottom: 0;
+  }
 }

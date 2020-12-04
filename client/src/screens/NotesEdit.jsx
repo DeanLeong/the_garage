@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './NotesEdit.css'
-import { postMaintenance_note, getAllMaintenance_notes, destroyMaintenance_note, putMaintenance_note } from '../services/maintenance_notes';
-import {Link, Redirect, useParams, useHistory} from 'react-router-dom'
+import {putMaintenance_note } from '../services/maintenance_notes';
+import {useParams, useHistory} from 'react-router-dom'
 
 function NotesEdit(props) {
   console.log(props)
@@ -14,16 +14,18 @@ function NotesEdit(props) {
   const { id, motorcycle_id } = useParams()
   const history = useHistory()
 
+  const sendRefresh = () => {
+    history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
+  }
+
   useEffect(() => {
     if (props.maintenance_notes.length) {
       const getNote = props.maintenance_notes.find((note) => note.id === Number(id))
       setNote(getNote)
       setLoaded(true)
-      console.log(note)
     }
   }, [id])
 
-  console.log(note)
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -37,6 +39,7 @@ function NotesEdit(props) {
     event.preventDefault()
     const updated = await putMaintenance_note(id, note)
     setUpdated(updated)
+    sendRefresh()
   }
 
   if (isUpdated) {

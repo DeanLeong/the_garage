@@ -14,7 +14,7 @@ function Header(props) {
             <button onClick={handleLogout} className="logout-button">Logout</button>
           </>
           :
-          <Link to='/'>Login/Register</Link>
+          <Link to='/'></Link>
       }
       {/* <hr /> */}
       {
