@@ -59,9 +59,12 @@
 
 @media screen and (max-width: 500px) {
   .moto-container {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start; */
+    display: grid;
     margin-bottom: 2.5vh;
   }
 
@@ -76,5 +79,10 @@
 
   .header {
     margin-bottom: 0;
+  }
+
+  .moto {
+    margin: 5vw;
+    min-width: 25vw;
   }
 }
