@@ -1,0 +1,39 @@
+.login-container {
+  background-color: #001524;
+  height: 75vw;
+}
+
+.welcome {
+  margin-top: 0vw;
+  color: white;
+}
+
+label {
+  color: white;
+}
+
+.login {
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .welcome {
+    padding-top: 10vw;
+    font-size: 5vw;
+  }
+  .login-form {
+    height: 30vh;
+  }
+
+  .login-container {
+    height: 90vh;
+  }
+
+  h3 {
+    padding-top: 20vw;
+  }
+
+  .basic-button {
+    height: 2.5vh;
+  }
+}

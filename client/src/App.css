@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.basic-button {
+  height: 3vw;
+  width: 8vw;
+  background-color: #1d3354;
+  color: white;
+}

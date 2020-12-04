@@ -1,0 +1,28 @@
+.notes-container {
+  background-color: #001524;
+  height: 80vw;
+}
+
+.notes-title {
+  margin-top: 0;
+  color: white;
+}
+
+.note {
+  text-decoration: none;
+  color: white;
+  margin-top: 1vh;
+}
+
+.note-box {
+  display: grid;
+}
+
+#add-note-btn {
+  margin-top: 2vh;
+}
+
+.add-notes-container {
+  display: flex;
+  justify-content: center;
+}
