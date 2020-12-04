@@ -11,26 +11,31 @@ function NotesDetail(props) {
   const [isDeleted, setIsDeleted] = useState(false)
   const { id } = useParams()
   const history = useHistory()
+  const {motorcycle_id} = useParams()
 
   useEffect(() => {
     if (props.maintenance_notes.length) {
       const getNotes = props.maintenance_notes.filter((note) => note.motorcycle_id === Number(id))
       setNotes(getNotes)
       setLoaded(true)
-      console.log(notes)
     }
   }, [id])
 
-  if (!isLoaded) {
-    return <h1>Loading...</h1>
-  }
-  if (isDeleted) {
-    history.push(`/notesdetail`)
+  // if (!isLoaded) {
+  //   return <h1>Loading...</h1>
+  // }
+  // if (isDeleted) {
+  //   history.push(`/notesdetail`)
+  // }
+
+  const sendRefresh = () => {
+    history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
   }
 
   const maintenance_noteHandleDelete = async (this_id) => {
     await destroyMaintenance_note(this_id)
     setIsDeleted(!isDeleted)
+    sendRefresh()
   }
 
   return (

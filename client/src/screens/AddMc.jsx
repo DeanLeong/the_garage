@@ -29,6 +29,7 @@ function AddMc(props) {
     event.preventDefault()
     const created = await postMotorcycle(motorcycle)
     setCreated({ created })
+    history.push(`/home`)
   }
   if (isCreated) {
     history.push(`/home`)

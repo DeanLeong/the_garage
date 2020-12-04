@@ -8,7 +8,6 @@ function NotesAdd(props) {
     content: '',
   })
   const [created, setCreated] = useState(false)
-  console.log(props)
   const {motorcycle_id} = useParams()
   const history = useHistory()
   
@@ -19,15 +18,17 @@ function NotesAdd(props) {
       [name]: value,
     })
   }
+
+  const sendRefresh = () => {
+    history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
+  }
   
   const handleSubmit = async (event) => {
     event.preventDefault()
     const created = await postMaintenance_note(motorcycle_id, maintenance_note)
     setCreated({ created })
     props.setMaintenance_notes(prevState => [...prevState, created])
-  }
-  if (created) {
-    history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
+    sendRefresh()
   }
 
 
