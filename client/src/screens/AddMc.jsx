@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AddMc.css'
 import { postMotorcycle } from '../services/motorcycles'
-import {Link, Redirect, useParams, useHistory} from 'react-router-dom'
+import {useParams, useHistory} from 'react-router-dom'
 
 function AddMc(props) {
   const [motorcycle, setMotorcycle] = useState({

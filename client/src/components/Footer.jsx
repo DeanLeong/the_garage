@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css'
-import {Link, Redirect, useParams, useHistory} from 'react-router-dom'
 
 function Footer(props) {
   return (
