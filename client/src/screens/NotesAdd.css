@@ -1,5 +1,5 @@
 .notes-add-container {
-  background-color: #e9fff9;
+  background-color: #001524;
   height: 75vw;
 }
 
@@ -7,4 +7,9 @@
   display: grid;
   max-width: 25vw;
   margin-left: 35vw;
+}
+
+.add-note-title {
+  color: white;
+  margin-top: 0;
 }

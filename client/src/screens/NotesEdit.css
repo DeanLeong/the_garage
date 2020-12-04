@@ -1,4 +1,14 @@
 .notes-edit-container {
-  background-color: #e9fff9;
+  background-color: #001524;
   height: 75vw;
+}
+
+.edit-comment-title {
+  color: white;
+  margin-top: 0;
+}
+
+.edit-form {
+  display: inline-grid;
+  max-width: 25vw;
 }
