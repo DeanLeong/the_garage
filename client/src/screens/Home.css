@@ -1,10 +1,11 @@
 .home-container {
-  background-color: #e9fff9;
+  background-color: #001524;
   height: 75vw;
 }
 
 .see-all {
   margin-top: 0;
+  color: white;
 }
 
 .mc-img {
@@ -26,6 +27,14 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.user-name {
+  color: white;
+}
+
+.moto-name {
+  color: white;
 }
 
 .moto {

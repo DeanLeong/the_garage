@@ -4,24 +4,27 @@
   width: 100vw;
   height: 8vw;
   box-shadow: 0px 0px 5px 5px #467599;
-  margin-top: 5vh;
-}
-
-.h3 {
-  margin: 0 auto;
+  margin-top: 0;
 }
 
 .github-logo {
   max-width: 10vw;
   max-height: 10vh;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .linkedin-logo {
   max-width: 10vw;
   max-height: 10vh;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 2vh;
 }
 
 .social-a {
   display: grid;
   margin: 15px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
