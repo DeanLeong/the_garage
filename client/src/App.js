@@ -78,12 +78,12 @@ function App() {
     history.push('/maintenance_notes')
   }
 
-  const maintenance_notehandleUpdate = async (id, maintenance_noteData) => {
+  const maintenance_noteHandleUpdate = async (id, maintenance_noteData) => {
     const updatedMaintenance_note = await putMaintenance_note(id, maintenance_noteData)
     setMaintenance_notes(prevState => prevState.map(maintenance_note => {
       return maintenance_note.id === Number(id) ? updatedMaintenance_note : maintenance_note
     }))
-    history.push('/maintenance_notes')
+    // history.push('/maintenance_notes')
   }
 
   const maintenance_noteHandleDelete = async (id) => {
@@ -118,19 +118,19 @@ function App() {
        </Route>
       
       <Route exact path={`/motorcycles/:id/notesdetail`} component={NotesDetail}>
-          <NotesDetail currentUser={currentUser} motorcycles={motorcycles} maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_notehandleUpdate={maintenance_notehandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete} maintenance_noteHandleCreate={maintenance_noteHandleCreate}/>
+          <NotesDetail currentUser={currentUser} motorcycles={motorcycles} maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_noteHandleUpdate={maintenance_noteHandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete} maintenance_noteHandleCreate={maintenance_noteHandleCreate}/>
       </Route> 
           
       <Route exact path={`/motorcycles/:motorcycle_id/notesdetail/:id/edit`} component={NotesEdit}>
-          <NotesEdit currentUser={currentUser} motorcycles={motorcycles} maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_notehandleUpdate={maintenance_notehandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete} maintenance_noteHandleCreate={maintenance_noteHandleCreate}/>
+          <NotesEdit currentUser={currentUser} motorcycles={motorcycles} maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_noteHandleUpdate={maintenance_noteHandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete} maintenance_noteHandleCreate={maintenance_noteHandleCreate}/>
       </Route>
           
       <Route exact path={`/motorcycles/:motorcycle_id/notesdetail/add`} component={NotesAdd}>
-          <NotesAdd currentUser={currentUser} motorcycles={motorcycles} maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_notehandleUpdate={maintenance_notehandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete} maintenance_noteHandleCreate={maintenance_noteHandleCreate}/>
+          <NotesAdd currentUser={currentUser} motorcycles={motorcycles} maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_noteHandleUpdate={maintenance_noteHandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete} maintenance_noteHandleCreate={maintenance_noteHandleCreate}/>
        </Route> 
           
       <Route exact path={`/addmotorcycle`}>
-          <AddMc currentUser={currentUser} motorcycles={motorcycles} maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_notehandleUpdate={maintenance_notehandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete} maintenance_noteHandleCreate={maintenance_noteHandleCreate}/>
+          <AddMc currentUser={currentUser} motorcycles={motorcycles} maintenance_notes={maintenance_notes} setMaintenance_notes={setMaintenance_notes} maintenance_noteHandleUpdate={maintenance_noteHandleUpdate} maintenance_noteHandleDelete={maintenance_noteHandleDelete} maintenance_noteHandleCreate={maintenance_noteHandleCreate}/>
       </Route> 
         
       </Switch>

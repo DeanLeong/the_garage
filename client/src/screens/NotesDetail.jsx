@@ -12,14 +12,15 @@ function NotesDetail(props) {
   const { id } = useParams()
   const history = useHistory()
   const {motorcycle_id} = useParams()
-console.log(props)
+  console.log(props)
+  
   useEffect(() => {
     if (props.maintenance_notes.length) {
       const getNotes = props.maintenance_notes.filter((note) => note.motorcycle_id === Number(id))
       setNotes(getNotes)
       setLoaded(true)
     }
-  }, [id])
+  }, [id, props.maintenance_note])
 
   // if (!isLoaded) {
   //   return <h1>Loading...</h1>
@@ -29,7 +30,7 @@ console.log(props)
   // }
 
   const sendRefresh = () => {
-    history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
+    history.push(`/motorcycles/${id}/notesdetail`)
   }
 
   const maintenance_noteHandleDelete = async (this_id) => {
