@@ -14,17 +14,17 @@ function NotesEdit(props) {
   const { id, motorcycle_id } = useParams()
   const history = useHistory()
 
-  const sendRefresh = () => {
-    history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
-  }
+  // const sendRefresh = () => {
+  //   history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
+  // }
 
   useEffect(() => {
     if (props.maintenance_notes.length) {
-      const getNote = props.maintenance_notes.find((note) => note.id === Number(id))
+      const getNote = props.maintenance_notes?.find((note) => note.id === Number(id))
       setNote(getNote)
       setLoaded(true)
     }
-  }, [id])
+  }, [id, props.maintenance_notes])
 
 
   const handleChange = (event) => {
@@ -37,15 +37,16 @@ function NotesEdit(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const updated = await putMaintenance_note(id, note)
-    setUpdated(updated)
-    sendRefresh()
+    // const updated = await putMaintenance_note(id, note)
+    // setUpdated(updated)
+    // sendRefresh()
+    props.maintenance_noteHandleUpdate(id, note)
+    history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
   }
 
-  // if (isUpdated) {
-  //   history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
-  // }
-
+//   if (isUpdated) {
+//     history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
+//  } 
   // const maintenance_notehandleUpdate = async (id, maintenance_noteData) => {
   //   const updatedMaintenance_note = await putMaintenance_note(id, maintenance_noteData)
   //   setMaintenance_notes(prevState => prevState.map(maintenance_note => {
