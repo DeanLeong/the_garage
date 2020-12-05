@@ -89,6 +89,7 @@ function App() {
   const maintenance_noteHandleDelete = async (id) => {
     await destroyMaintenance_note(id)
     setMaintenance_notes(prevState => prevState.filter(maintenance_note => maintenance_note.id !== id))
+    // history.push(`/motorcycles/${id}`)
   }
 
   //console.log(currentUser)
