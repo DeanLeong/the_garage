@@ -5,10 +5,16 @@
   justify-content: center;
   margin-bottom: 0;
   margin-top: 5vh;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .home-container {
   background-color: #001524;
+  background-image: url("https://images.unsplash.com/photo-1477333183135-292dd5b3910f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1349&q=80");
+  /* from  https://unsplash.com/@lightninghorse*/
+  min-height: 200vh;
+  min-width: 100vw;
 }
 
 .see-all {
@@ -22,11 +28,11 @@
   width: 15vw;
   margin: 5vw;
   margin-bottom: 0.5vw;
-  display: ;
 }
 
 .mc-link {
   text-decoration: none;
+  max-height: 30vh;
 }
 
 .user-img {
@@ -39,6 +45,7 @@
 }
 
 .moto-name {
+  background-color: #001524;
   color: white;
 }
 
@@ -54,9 +61,12 @@
 
 @media screen and (max-width: 500px) {
   .moto-container {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start; */
+    display: grid;
     margin-bottom: 2.5vh;
   }
 
@@ -71,5 +81,10 @@
 
   .header {
     margin-bottom: 0;
+  }
+
+  .moto {
+    margin: 5vw;
+    min-width: 25vw;
   }
 }

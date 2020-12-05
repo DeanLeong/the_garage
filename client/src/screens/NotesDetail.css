@@ -1,10 +1,14 @@
 .notes-detail-container {
   background-color: #001524;
-  height: 75vw;
+  min-height: 100vh;
   margin-top: 1vh;
 }
 
 .detail-title {
   margin-top: 1vh;
   color: white;
+}
+
+.add-notes-container {
+  display: grid;
 }

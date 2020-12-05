@@ -42,21 +42,21 @@ function NotesEdit(props) {
     sendRefresh()
   }
 
-  if (isUpdated) {
-    history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
-  }
+  // if (isUpdated) {
+  //   history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
+  // }
 
-  const maintenance_notehandleUpdate = async (id, maintenance_noteData) => {
-    const updatedMaintenance_note = await putMaintenance_note(id, maintenance_noteData)
-    setMaintenance_notes(prevState => prevState.map(maintenance_note => {
-      return maintenance_note.id === Number(id) ? updatedMaintenance_note : maintenance_note
-    }))
-    history.push('/maintenance_notes')
-  }
+  // const maintenance_notehandleUpdate = async (id, maintenance_noteData) => {
+  //   const updatedMaintenance_note = await putMaintenance_note(id, maintenance_noteData)
+  //   setMaintenance_notes(prevState => prevState.map(maintenance_note => {
+  //     return maintenance_note.id === Number(id) ? updatedMaintenance_note : maintenance_note
+  //   }))
+  //   history.push('/maintenance_notes')
+  // }
  
   return (
     <div className='notes-edit-container'>
-      <h1>Edit your comment! DO IT!</h1>
+      <h2 className="edit-comment-title">Edit your comment!</h2>
       {
         <form className="edit-form" onSubmit={handleSubmit}>
           <label className="edit-label">

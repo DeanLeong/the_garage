@@ -3,8 +3,12 @@
 }
 
 .basic-button {
-  height: 3vw;
-  width: 8vw;
+  min-height: 3vw;
+  min-width: 8vw;
   background-color: #1d3354;
   color: white;
+}
+
+.header-title {
+  min-width: 20vw;
 }
