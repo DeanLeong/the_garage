@@ -13,7 +13,7 @@ function NotesDetail(props) {
   const { id } = useParams()
   const history = useHistory()
   const {motorcycle_id} = useParams()
-  console.log(props)
+
   
   useEffect(() => {
     if (props.maintenance_notes.length) {
@@ -22,13 +22,6 @@ function NotesDetail(props) {
       setLoaded(true)
     }
   }, [id, props.maintenance_notes])
-
-  // if (!isLoaded) {
-  //   return <h1>Loading...</h1>
-  // }
-  // if (isDeleted) {
-  //   history.push(`/notesdetail`)
-  // }
 
   const sendRefresh = () => {
     history.push(`/motorcycles/${id}`)

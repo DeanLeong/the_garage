@@ -61,11 +61,6 @@
 
 @media screen and (max-width: 500px) {
   .moto-container {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start; */
     display: grid;
     margin-bottom: 2.5vh;
   }

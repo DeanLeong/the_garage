@@ -30,3 +30,5 @@ function Header(props) {
 }
 
 export default Header;
+
+// deleting commented code in here messes stuff up
