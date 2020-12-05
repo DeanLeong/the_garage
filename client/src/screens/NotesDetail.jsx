@@ -12,6 +12,8 @@ function NotesDetail(props) {
   const [maintenance_notes, setMaintenance_notes] = useState([])
   const { id } = useParams()
   const history = useHistory()
+  const {motorcycle_id} = useParams()
+  console.log(props)
   
   useEffect(() => {
     if (props.maintenance_notes.length) {
@@ -21,6 +23,12 @@ function NotesDetail(props) {
     }
   }, [id, props.maintenance_notes])
 
+  // if (!isLoaded) {
+  //   return <h1>Loading...</h1>
+  // }
+  // if (isDeleted) {
+  //   history.push(`/notesdetail`)
+  // }
 
   const sendRefresh = () => {
     history.push(`/motorcycles/${id}`)
@@ -29,6 +37,7 @@ function NotesDetail(props) {
   const maintenance_noteHandleDelete = async (id) => {
     await destroyMaintenance_note(id)
     setMaintenance_notes(prevState => prevState.filter(note => note.id !== id))
+    // { setIsDeleted(true) ? < Redirect to = {`/motorcycles/${id}` } /> : setIsDeleted(true)}
   }
 
   if (isDeleted) {
