@@ -8,8 +8,8 @@ function Home(props) {
   return (
     <div className="home-container">
       <h1 className="see-all">See All Motorcycles</h1>
-      <img src={props.currentUser.img_url} className="user-img" alt="user profile"/>
-      <p className="user-name">{props.currentUser.username}</p>
+      {/* <img src={props.currentUser.img_url} className="user-img" alt="user profile"/>
+      <p className="user-name">{props.currentUser.username}</p> */}
       {/* use info being commented out allows for page refreshes */}
 
       <Link to={`/addmotorcycle`}><button className="basic-button" id="add-mc-btn">Add a new motorcycle!</button></Link>
