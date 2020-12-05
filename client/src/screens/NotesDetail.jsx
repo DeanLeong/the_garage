@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './NotesDetail.css'
-import {Link, useParams, useHistory} from 'react-router-dom'
+import {Link, useParams, useHistory, Redirect} from 'react-router-dom'
 import { postMaintenance_note, destroyMaintenance_note} from '../services/maintenance_notes';
 
 
@@ -30,7 +30,10 @@ function NotesDetail(props) {
   const maintenance_noteHandleDelete = async (id) => {
     await destroyMaintenance_note(id)
     setMaintenance_notes(prevState => prevState.filter(note => note.id !== id))
-    sendRefresh()
+  }
+
+  if (isDeleted) {
+    history.push(`/motorcycles/${id}`)
   }
 
   return (
