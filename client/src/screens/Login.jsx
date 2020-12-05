@@ -43,9 +43,8 @@ function Login(props) {
         />
       </label>
       <br />
-      <Link to='/register'><button className="basic-button">Register</button></Link>
-        
-      <button className="basic-button">Submit</button>
+        <button className="basic-button">Login</button>
+        <Link to='/register'><button className="basic-button">Register</button></Link>
       </form>
     </div>
   );

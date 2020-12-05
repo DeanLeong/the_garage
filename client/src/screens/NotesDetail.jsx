@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './NotesDetail.css'
-import {Link, useParams, useHistory} from 'react-router-dom'
+import {Link, useParams, useHistory, Redirect} from 'react-router-dom'
 import { postMaintenance_note, destroyMaintenance_note} from '../services/maintenance_notes';
 
 
@@ -9,33 +9,30 @@ function NotesDetail(props) {
   const [notes, setNotes] = useState([])
   const [isLoaded, setLoaded] = useState(null)
   const [isDeleted, setIsDeleted] = useState(false)
+  const [maintenance_notes, setMaintenance_notes] = useState([])
   const { id } = useParams()
   const history = useHistory()
   const {motorcycle_id} = useParams()
-
+  
   useEffect(() => {
     if (props.maintenance_notes.length) {
       const getNotes = props.maintenance_notes.filter((note) => note.motorcycle_id === Number(id))
       setNotes(getNotes)
       setLoaded(true)
     }
-  }, [id])
-
-  // if (!isLoaded) {
-  //   return <h1>Loading...</h1>
-  // }
-  // if (isDeleted) {
-  //   history.push(`/notesdetail`)
-  // }
+  }, [id, props.maintenance_notes])
 
   const sendRefresh = () => {
-    history.push(`/motorcycles/${motorcycle_id}/notesdetail`)
+    history.push(`/motorcycles/${id}`)
   }
 
-  const maintenance_noteHandleDelete = async (this_id) => {
-    await destroyMaintenance_note(this_id)
-    setIsDeleted(!isDeleted)
-    sendRefresh()
+  const maintenance_noteHandleDelete = async (id) => {
+    await destroyMaintenance_note(id)
+    setMaintenance_notes(prevState => prevState.filter(note => note.id !== id))
+  }
+
+  if (isDeleted) {
+    history.push(`/motorcycles/${id}`)
   }
 
   return (

@@ -6,6 +6,7 @@ function Register(props) {
     const [formData, setFormData] = useState({
       username: "",
       email: "",
+      img_url: "",
       password: ""
     })
   
@@ -19,13 +20,14 @@ function Register(props) {
   
   return (
       <div className="register-container">
-      <form onSubmit={(e) => {
+      <form className="register-form" onSubmit={(e) => {
         e.preventDefault();
         props.handleRegister(formData);
       }}>
         <h3 className="register-title">Register</h3>
         <label>Username:
           <input
+            placeholder="Username"
             type='text'
             name='username'
             value={formData.username}
@@ -35,6 +37,7 @@ function Register(props) {
         <br />
         <label>Email:
           <input
+            placeholder="email"
             type='text'
             name='email'
             value={formData.email}
@@ -42,8 +45,19 @@ function Register(props) {
           />
         </label>
         <br />
+        <label>Image Url:
+         <input
+            placeholder='Image URL'
+            type='text'
+            name='img_url'
+            value={formData.img_url}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
         <label>Password:
           <input
+            placeholder="Password"
             type='password'
             name='password'
             value={formData.password}
