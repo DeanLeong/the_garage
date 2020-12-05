@@ -160,10 +160,10 @@ client
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Rails Boilerplate   |    H     |     3 hrs      |     0 hrs     |   TBD    |
-| Rails Tables 1-3 |    H     |     6 hrs      |     0 hrs     |     TBD     |
-| Users Concept|    H     |     10 hrs      |     0 hrs     |   TBD   |
-| React Boilerplate |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| Rails Boilerplate   |    H     |     3 hrs      |     5 hrs     |   TBD    |
+| Rails Tables 1-3 |    H     |     6 hrs      |     12 hrs     |     TBD     |
+| Users Concept|    H     |     10 hrs      |     10 hrs     |   TBD   |
+| React Boilerplate |    H     |     3 hrs      |     5 hrs     |     TBD     |
 | Register Page   |    H     |     3 hrs      |     0 hrs     |    TBD   |
 | Login Page |    H     |     3 hrs      |     0 hrs     |     TBD     |
 | Homepage   |    H     |     5 hrs      |     0 hrs     |   TBD    |

@@ -1,0 +1,14 @@
+.notes-add-container {
+  background-color: #001524;
+  min-height: 100vh;
+}
+
+.create-note-form {
+  display: inline-grid;
+  max-width: 25vw;
+}
+
+.add-note-title {
+  color: white;
+  margin-top: 0;
+}
