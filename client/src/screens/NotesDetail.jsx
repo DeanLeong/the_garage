@@ -21,7 +21,7 @@ function NotesDetail(props) {
       setNotes(getNotes)
       setLoaded(true)
     }
-  }, [id, props.maintenance_note])
+  }, [id, props.maintenance_notes])
 
   // if (!isLoaded) {
   //   return <h1>Loading...</h1>
@@ -36,8 +36,8 @@ function NotesDetail(props) {
 
   const maintenance_noteHandleDelete = async (id) => {
     await destroyMaintenance_note(id)
-    setMaintenance_notes(prevState => prevState.filter(maintenance_note => maintenance_note.id !== id))
-    // sendRefresh()
+    setMaintenance_notes(prevState => prevState.filter(note => note.id !== id))
+    sendRefresh()
   }
 
   return (
@@ -49,7 +49,7 @@ function NotesDetail(props) {
         notes.map(note => (
           <p key={note.id} className="note">
             {note.content}
-            {<Link to={`/motorcycles/${id}`}><button className="basic-button" onClick={() => maintenance_noteHandleDelete(note.id)}>Delete Note</button></Link>}
+            {<button className="basic-button" onClick={() => maintenance_noteHandleDelete(note.id)}>Delete Note</button>}
             {<Link to={`/motorcycles/${id}/notesdetail/${note.id}/edit`}><button className="basic-button">Edit Note</button></Link>}
           </p>
         ))
