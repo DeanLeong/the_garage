@@ -4,13 +4,13 @@ import {Link} from 'react-router-dom'
 
 
 function Home(props) {
-
+console.log(props)
   return (
     <div className="home-container">
       <h1 className="see-all">See All Motorcycles</h1>
-      {/* <img src={props.currentUser.img_url} className="user-img" alt="user profile"/>
-      <p className="user-name">{props.currentUser.username}</p> */}
-      {/* use info being commented out allows for page refreshes */}
+      <img src={props.currentUser.img_url} className="user-img" alt="user profile"/>
+      <p className="user-name">{props.currentUser.username}</p>
+      {/* use info being commented out allows for page refreshes. How to fix? */}
 
       <Link to={`/addmotorcycle`}><button className="basic-button" id="add-mc-btn">Add a new motorcycle!</button></Link>
 

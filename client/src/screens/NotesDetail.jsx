@@ -12,7 +12,7 @@ function NotesDetail(props) {
   const { id } = useParams()
   const history = useHistory()
   const {motorcycle_id} = useParams()
-
+console.log(props)
   useEffect(() => {
     if (props.maintenance_notes.length) {
       const getNotes = props.maintenance_notes.filter((note) => note.motorcycle_id === Number(id))

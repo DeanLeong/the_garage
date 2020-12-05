@@ -6,6 +6,7 @@
   margin-bottom: 0;
   margin-top: 5vh;
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 .home-container {
@@ -13,6 +14,7 @@
   background-image: url("https://images.unsplash.com/photo-1477333183135-292dd5b3910f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1349&q=80");
   /* from  https://unsplash.com/@lightninghorse*/
   min-height: 200vh;
+  min-width: 100vw;
 }
 
 .see-all {

@@ -1,6 +1,6 @@
 .notes-edit-container {
   background-color: #001524;
-  height: 75vw;
+  min-height: 100vh;
 }
 
 .edit-comment-title {
