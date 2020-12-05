@@ -13,7 +13,6 @@ function NotesDetail(props) {
   const { id } = useParams()
   const history = useHistory()
   const {motorcycle_id} = useParams()
-
   
   useEffect(() => {
     if (props.maintenance_notes.length) {

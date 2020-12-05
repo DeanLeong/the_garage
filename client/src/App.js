@@ -5,6 +5,7 @@ import './App.css';
 import Layout from './layouts/Layout'
 import Login from './screens/Login'
 import Register from './screens/Register'
+//import AddMc from './screens/AddMc'
 import Home from './screens/Home'
 import McNotes from './screens/McNotes'
 import NotesDetail from './screens/NotesDetail'
@@ -31,7 +32,7 @@ function App() {
       }
     }
     handleVerify()
-  }, [history])
+  }, [])
 
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData)
@@ -63,7 +64,7 @@ function App() {
     }
       fetchMotorcycles()
     fetchMaintenance_notes()
-  }, [currentUser, motorcycles.id])
+  }, [])
   
   const motorcycleHandleCreate = async (motorcycleData) => {
     const newMotorcycle = await postMotorcycle(motorcycleData)
