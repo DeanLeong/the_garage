@@ -8,7 +8,7 @@ import { postMaintenance_note, destroyMaintenance_note} from '../services/mainte
 function NotesDetail(props) {
   const [notes, setNotes] = useState([])
   const [isLoaded, setLoaded] = useState(null)
-  const [isDeleted, setIsDeleted] = useState(false)
+  const [deleted, setDeleted] = useState(false)
   const [maintenance_notes, setMaintenance_notes] = useState([])
   const { id } = useParams()
   const history = useHistory()
@@ -27,13 +27,15 @@ function NotesDetail(props) {
   }
 
   const maintenance_noteHandleDelete = async (id) => {
-    await destroyMaintenance_note(id)
+    const deleted = await destroyMaintenance_note(id)
+    setDeleted({ deleted })
     setMaintenance_notes(prevState => prevState.filter(note => note.id !== id))
+    sendRefresh()
   }
 
-  if (isDeleted) {
-    history.push(`/motorcycles/${id}`)
-  }
+  // if (isDeleted) {
+  //   history.push(`/motorcycles/${id}`)
+  // }
 
   return (
     <div className="notes-detail-container">
@@ -44,7 +46,7 @@ function NotesDetail(props) {
         notes.map(note => (
           <p key={note.id} className="note">
             {note.content}
-            {<button className="basic-button" onClick={() => maintenance_noteHandleDelete(note.id)}>Delete Note</button>}
+            {<button className = "basic-button" onClick={() => maintenance_noteHandleDelete(note.id)}>Delete Note</button>}
             {<Link to={`/motorcycles/${id}/notesdetail/${note.id}/edit`}><button className="basic-button">Edit Note</button></Link>}
           </p>
         ))
