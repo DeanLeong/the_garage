@@ -62,11 +62,13 @@
 @media screen and (max-width: 500px) {
   .moto-container {
     display: grid;
-    margin-bottom: 2.5vh;
+    margin-bottom: 0;
   }
 
   .home-container {
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin-bottom: 0;
   }
 
   .header-title {
@@ -81,5 +83,13 @@
   .moto {
     margin: 5vw;
     min-width: 25vw;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .home-container {
+    min-height: 100vh;
+    min-width: 100vw;
+    margin-bottom: 0;
   }
 }
