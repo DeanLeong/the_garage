@@ -160,18 +160,18 @@ client
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Rails Boilerplate   |    H     |     3 hrs      |     5 hrs     |   TBD    |
-| Rails Tables 1-3 |    H     |     6 hrs      |     12 hrs     |     TBD     |
-| Users Concept|    H     |     10 hrs      |     10 hrs     |   TBD   |
-| React Boilerplate |    H     |     3 hrs      |     5 hrs     |     TBD     |
-| Register Page   |    H     |     3 hrs      |     0 hrs     |    TBD   |
-| Login Page |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Homepage   |    H     |     5 hrs      |     0 hrs     |   TBD    |
-| Motorcycle Page |    H     |     5 hrs      |     0 hrs     |     TBD     |
-| Add Motorcycle Page |    H     |     5 hrs      |     0 hrs     |     TBD     |
-| General CSS |    H     |     10 hrs      |     0 hrs     |     TBD     |
-| Quality Testing and Bug Fixing |    H     |     10 hrs      |     0 hrs     |     TBD     |
-| TOTAL               |          |     0 hrs      |     0 hrs     |     TBD     |
+| Rails Boilerplate   |    H     |     3 hrs      |     5 hrs     |   5 hrs    |
+| Rails Tables 1-3 |    H     |     6 hrs      |     12 hrs     |     12 hrs     |
+| Users Concept|    H     |     10 hrs      |     10 hrs     |   5 hrs   |
+| React Boilerplate |    H     |     3 hrs      |     5 hrs     |     5 hrs     |
+| Register Page   |    H     |     3 hrs      |     2 hrs     |    2 hrs   |
+| Login Page |    H     |     3 hrs      |     2 hrs     |     2 hrs     |
+| Homepage   |    H     |     5 hrs      |     5 hrs     |   5 hrs    |
+| Motorcycle Page |    H     |     5 hrs      |     6 hrs     |     6 hrs     |
+| Add Motorcycle Page |    H     |     5 hrs      |     2 hrs     |     2 hrs     |
+| General CSS |    H     |     10 hrs      |     12 hrs     |     12 hrs     |
+| Quality Testing and Bug Fixing |    H     |     10 hrs      |     14 hrs     |     14 hrs     |
+| TOTAL               |          |     53 hrs      |     71 hrs     |     71 hrs     |
 
 
 <br>
@@ -190,16 +190,40 @@ https://app.diagrams.net/?libs=general;uml#G1srwXfq0TkSBgOqrirRop1_9kiKZA5Zm9
 
 ## Post-MVP
 
-1 - Add a users concept OR Add "Motorcycle Parts" to the motorcycle's page. Can add images of desired parts etc.
+1 - Add "Motorcycle Parts" to the motorcycle's page. Can add images of desired parts etc.
 
 2 - A history page to see notes after they are deleted.
+
+3 - CRUD on Motorcycles and users - (Create for users and motorcycles made)l
 
 ***
 
 ## Code Showcase
+```
+useEffect(() => {
+    if (motorcycles.length) {
+      const getMotorcycle = motorcycles.find((moto) => moto.id === Number(id))
+      setMotorcycle(getMotorcycle)
+    }
+  }, [id, motorcycles])
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+  return (
+    <div className="notes-container">
+      <h3 className='notes-title'>See Notes for: </h3>
+      <div className="notes-box">
+            <img src={motorcycle.img_url} className="mc-img" alt="motorcycle"/><p className="moto-name">{motorcycle.name}</p>
+            <div key={motorcycle.id} className="note-box">
+           { motorcycle.maintenance_notes && motorcycle.maintenance_notes.map(note => (
+             <Link key={note.id} to={`/motorcycles/${id}/notesdetail`}  className="note">{note.content}</Link>
+            )) }
+      </div>
+        <Link to={`/motorcycles/${id}/notesdetail/add`}><button className="basic-button" id="add-note-btn">Add Note</button></Link>
+        </div>
+    </div>
+
+```
+It's difficult to choose which part of my code I'm most proud of, but the snippet above is definitely some of my favorite because it allows my notes page to only render the notes that are relevent to the correct motorcycle.
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> The biggest problem I ran into was having trouble with getting functions passed as props correctly. The solution was to write functions in the same file, but this is something that I would like to revist and re-factor to clean up the code.
