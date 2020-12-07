@@ -19,7 +19,8 @@ function Register(props) {
     }
   
   return (
-      <div className="register-container">
+    <div className="register-container">
+      <h2 className="register-title">Register Here:</h2>
       <form className="register-form" onSubmit={(e) => {
         e.preventDefault();
         props.handleRegister(formData);
