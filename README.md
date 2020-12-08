@@ -1,6 +1,8 @@
 # the_garage
 # PROJECT 4 README <!-- omit in toc -->
 
+Live Site: https://deanleongthegarage.netlify.app/
+
 - [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)
